@@ -46,8 +46,8 @@ function InstructorCard({ instructor }: { instructor: (typeof instructorData)[0]
   const readMoreText = isExpanded ? "Read Less" : "Read More";
 
   return (
-    <Card id="instructor" className="shadow-lg scale-[0.97] w-[437px] rounded-2xl bg-[#F8F8F8] border border-gray-200">
-      <CardContent className="">
+    <Card id="instructor" className="shadow-lg rounded-2xl bg-[#F8F8F8] border border-gray-200 w-full sm:w-[320px] md:w-[380px] lg:w-[437px]">
+      <CardContent className="p-6">
         {/* Top section: Avatar, Name, Role, Students */}
         <div className="flex gap-4 mb-4">
           <Avatar className="h-20 w-20 flex-shrink-0 rounded-lg">
@@ -94,12 +94,12 @@ export function InstructorsSection() {
       <div className="container mx-auto px-4">
         
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1E293B] mb-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mb-8">
           Our Course Instructors
         </h2>
 
         {/* Instructors Grid */}
-        <div className="w-full flex flex-row ">
+        <div className="w-full flex flex-col sm:flex-row gap-4 sm:gap-6 overflow-x-auto">
           {instructorData.map((instructor) => (
             <InstructorCard key={instructor.id} instructor={instructor} />
           ))}
