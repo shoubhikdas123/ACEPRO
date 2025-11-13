@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { AlertCircle } from 'lucide-react';
+import Tick from '@/components/ui/Tick';
+import RunClock from '@/components/ui/runclock';
 
 // --- Data for the schedule cards ---
 // We define the data as an array to easily map over it.
@@ -62,30 +64,48 @@ const scheduleData = [
  */
 function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
   return (
-    <Card className="shadow-lg overflow-hidden">
+    <Card className="rounded-2xl shadow-lg overflow-hidden border border-gray-200">
       <CardContent className="p-6">
-        <div className="flex flex-col md:flex-row md:items-start gap-6">
-          
-          {/* Left Side: Info */}
-          <div className="flex-1 space-y-4">
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="outline" className="text-blue-600 border-blue-200">
-                Online
-              </Badge>
-              <Badge variant="outline" className="text-orange-600 border-orange-200 bg-orange-50">
-                PMP Exam Prep
-              </Badge>
-            </div>
-            
+        {/* Top Section with Tags and Discount Badge */}
+        <div className="flex justify-between  items-start mb-4">
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2">
+            <Badge
+              variant="outline"
+              className="bg-blue-100 text-[#3E3E3E] border-blue-200"
+            >
+              Online
+            </Badge>
+            <Badge
+              variant="outline"
+              className="bg-pink-100 text-[#3E3E3E] border-pink-200"
+            >
+              PMP Exam Prep
+            </Badge>
+          </div>
+          {/* 50% Off Badge */}
+          <div 
+            className="h-6 w-24 text-white bg-no-repeat font-bold flex items-center justify-center"
+            style={{ backgroundImage: 'url(/50percent.png)', backgroundSize: 'contain' }}
+          >
+            {item.discount}
+          </div>
+        </div>
+
+        {/* Main Content Section */}
+        <div className="flex gap-8">
+          {/* Left Column */}
+          <div className="flex-1 ">
             {/* Date and Time */}
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">{item.date}</h3>
-              <p className="text-sm text-muted-foreground">{item.time}</p>
-            </div>
-            
+            <h3 className="text-2xl  font-bold text-gray-900 dark:text-white mb-1">
+              {item.date}
+            </h3>
+            <p className="text-sm border-b-2 pb-2 text-muted-foreground mb-4">
+              {item.time}
+            </p>
+
             {/* Instructor */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mb-3">
               <Avatar className="h-10 w-10">
                 <AvatarImage src={item.instructor.avatarSrc} alt={item.instructor.name} />
                 <AvatarFallback>MP</AvatarFallback>
@@ -95,20 +115,19 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
                 <p className="text-sm text-muted-foreground">{item.instructor.role}</p>
               </div>
             </div>
-            
+
             {/* Batch Info */}
-            <p className="text-sm text-muted-foreground">{item.batchInfo}</p>
+            <p className="text-sm text-muted-foreground">
+              {item.batchInfo}
+            </p>
           </div>
-          
-          {/* Right Side: Price & Actions */}
-          <div className="flex flex-col items-start md:items-end gap-3 md:w-auto">
-            {/* Price */}
-            <div className="text-right">
-              <Badge className="bg-green-100 text-green-700 hover:bg-green-100 mb-1">
-                {item.discount}
-              </Badge>
-              <div className="flex items-baseline gap-2 justify-end">
-                <span className="text-3xl font-bold text-gray-900 dark:text-white">
+
+          {/* Right Column */}
+          <div className="flex flex-col items-end justify-between">
+            {/* Price Section */}
+            <div className="text-right mb-4">
+              <div className="flex items-baseline justify-end gap-2 mb-1">
+                <span className="text-3xl font-extrabold text-gray-900 dark:text-white">
                   ₹{item.price}
                 </span>
                 <span className="text-lg text-muted-foreground line-through">
@@ -117,26 +136,26 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
               </div>
               <p className="text-xs text-muted-foreground">(Excl all taxes)</p>
             </div>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3 w-full md:w-auto">
-              <Button variant="outline" className="w-full">
-                View Dates
-              </Button>
-              <Button className="w-full">
-                Enroll Now
-              </Button>
-            </div>
-            
+              <div className="flex gap-3 mt-6">
+          <Button variant="outline" className="flex-1 text-[#016FC0] border-[#016FC0] border-2 rounded-md font-semibold hover:bg-blue-50">
+            View Dates
+          </Button>
+          <Button className="flex-1 bg-[#016FC0] rounded-md font-semibold hover:bg-[#014A99]">
+            Enroll Now
+          </Button>
+        </div>
             {/* Urgency Message */}
             {item.seatsAvailable > 0 && (
               <div className="flex items-center gap-1.5 text-destructive font-medium text-sm">
-                <AlertCircle className="h-4 w-4" />
+                <RunClock className="h-4 w-4" />
                 <span>{item.seatsAvailable} Seats Available</span>
               </div>
             )}
           </div>
         </div>
+
+        {/* Action Buttons */}
+      
       </CardContent>
     </Card>
   );

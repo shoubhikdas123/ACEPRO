@@ -17,6 +17,9 @@ import TeamLevelUpCTA from "./components/TeamLevelUpCta";
 import RelatedCoursesSection from "./components/RelatedCourses";
 import MainFooter from "./components/Footer";
 import CourseSidebar from "./components/SideBar";
+import ScheduleCard from "./components/ScheduleCard";
+import CurriculumSection from "./components/Curriculum";
+import ClientLogosSection from "./components/ClientLogoSection";
 export default function Home() {
   return (
     <><Hero />
@@ -26,20 +29,22 @@ export default function Home() {
       <ExpertMentorCTA />
       <div className="ml-4">
         <StickyCourseNav />
-        <div className="w-full  flex">
-          <div className="w-3/4 mr-8 ml-6">
+        <div className="w-full flex flex-col md:flex-row">
+          <div className="w-full md:w-2/3 md:mr-2 md:ml-6">
             <OverviewSection />
             <TakeawaysSection />
             <BenefitsSection />
             <AceproEdgeSection />
+            <ScheduleCard/>
+            <CurriculumSection/>
             <CourseAudienceSection />
             <InstructorsSection />
           </div>
-          <div className="1/4 mr-6"> <CourseSidebar /></div>
+          <div className="w-full md:w-1/3 md:mr-4 mt-8 md:mt-0"> <CourseSidebar /></div>
         </div>
       </div>
       <CertificateSection />
-
+      <ClientLogosSection/>
       <TestimonialsSection />
       <FaqSection />
       <TeamLevelUpCTA />

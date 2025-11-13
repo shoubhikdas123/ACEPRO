@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${figtree.variable} antialiased`}
+        className={`${figtree.variable} antialiased overflow-x-hidden`}
       >
         {children}
       </body>

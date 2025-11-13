@@ -11,7 +11,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Star, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Star, ArrowLeft, ArrowRight, MoveLeft, MoveRight } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Button } from '@/components/ui/button';
 
@@ -58,7 +58,7 @@ const testimonials = [
 function TestimonialCard({ item }: { item: (typeof testimonials)[0] }) {
   return (
     // Card with custom styling from the image
-    <Card className="h-full rounded-2xl border-4 border-dashed border-yellow-400/80 bg-background shadow-lg">
+    <Card className="h-full rounded-2xl -4  bg-background shadow-lg">
       <CardContent className="flex h-full flex-col justify-between p-6">
         <div>
           {/* Star Rating */}
@@ -132,23 +132,23 @@ export function TestimonialsSection() {
 
   return (
     // Assuming a dark background as per the image
-    <section className="py-16 bg-gray-900 dark:bg-gray-950">
+    <section className="py-16  dark:bg-gray-950">
       <div className="container mx-auto px-4">
         
         {/* Header: Title & Navigation */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-0">
+          <h2 className="text-3xl md:text-4xl ml-[24px] font-bold text-[#1E293B] mb-4 sm:mb-0">
             See what our students <br /> have to say about us
           </h2>
           
           {/* Custom Navigation Arrows */}
-          <div className="flex gap-3">
-            <Button variant="outline" size="icon" className="bg-blue-500 hover:bg-blue-600 text-white border-none" onClick={() => api?.scrollPrev()}>
-              <ArrowLeft className="h-5 w-5" />
+          <div className="flex gap-3 ">
+            <Button variant="outline" size="icon" className="w-[53px] h-[30px] rounded-[30px] border-2 border-blue-500 flex items-center bg-[#DEF1FF]  justify-center text-blue-500 hover:bg-blue-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all" onClick={() => api?.scrollPrev()}>
+              <MoveLeft className="w-6 h-6" />
               <span className="sr-only">Previous slide</span>
             </Button>
-            <Button variant="outline" size="icon" className="bg-blue-500 hover:bg-blue-600 text-white border-none" onClick={() => api?.scrollNext()}>
-              <ArrowRight className="h-5 w-5" />
+            <Button className="w-[53px] h-[30px] rounded-[30px] border-2 border-blue-500 flex items-center bg-[#DEF1FF]  justify-center text-blue-500 hover:bg-blue-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all" onClick={() => api?.scrollNext()}>
+              <MoveRight className="w-6 h-6" />
               <span className="sr-only">Next slide</span>
             </Button>
           </div>
@@ -161,7 +161,7 @@ export function TestimonialsSection() {
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full scale-[0.97]"
         >
           <CarouselContent className="-ml-4">
             {testimonials.map((item) => (

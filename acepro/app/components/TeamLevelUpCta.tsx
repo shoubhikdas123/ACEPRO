@@ -1,63 +1,44 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
-/**
- * TeamLevelUpCTA
- * A call-to-action banner for corporate/team services.
- * Uses React, TailwindCSS, and shadcn/ui Button.
- *
- * NOTE: This component relies on an image with a transparent background
- * for the person. The `src` of the image ("./woman-thumbs-up.png")
- * is a placeholder and MUST be replaced.
- */
 export function TeamLevelUpCTA() {
   return (
-    // The outer section provides the light gray background and vertical padding.
-    <section className="bg-slate-100 dark:bg-slate-800 py-16">
-      <div className="container mx-auto px-4">
-        {/* Relative container to position the image */}
-        <div className="relative">
+    <section className="bg-white  dark:bg-slate-900 md:py-24  overflow-visible">
+      <div className="container mx-auto px-4 md:px-6">
+        
+        {/* Card Container */}
+        <div className="relative w-full rounded-[2.5rem] bg-gradient-to-r from-blue-100 via-blue-50 to-cyan-50 dark:from-blue-950/60 dark:via-blue-900/40 dark:to-cyan-900/40">
           
-          {/* Image Container
-            - Positioned absolutely to break out of the blue banner.
-            - `bottom-0` aligns it with the bottom of the blue banner.
-            - `right-16` (and responsive variants) positions it.
-            - `z-20` ensures it's on top of the blue banner.
-            - `w-64` (and variants) controls the size.
-          */}
-          <div className="absolute -bottom-8 right-8 sm:right-16 w-48 sm:w-56 md:w-64 h-auto z-20 pointer-events-none">
-            {/* Background Glow */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-blue-300/30 dark:bg-blue-500/30 rounded-full blur-2xl z-10"></div>
+          {/* Flex Wrapper */}
+          <div className="flex  flex-col md:flex-row items-center">
             
-            {/* Person Image
-              - Needs to be a PNG with a transparent background.
-              - Replace './woman-thumbs-up.png' with your image path.
-              - `relative` and `z-20` keep it on top of the glow.
-            */}
-            <img
-              src="./woman-thumbs-up.png" // <-- REPLACE THIS with your image path
-              alt="Team member"
-              className="relative z-20 w-full h-auto object-contain object-bottom"
-            />
-          </div>
+            {/* Left Content Area */}
+            <div className="flex  w-4/5 flex-row px-8  md:px-12  py-6 text-center md:text-left">
+              <h2 className="text-[40px] md:text-4xl lg:text-[40px] pr-16 font-bold text-gray-900 dark:text-white leading-tight tracking-tight mb-8">
+                Looking to Level Up Your Team?
+              </h2>
+              <Button 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-10 py-6 text-lg rounded-[4px] shadow-lg shadow-blue-600/20"
+              >
+                Contact Us
+              </Button>
+            </div>
 
-          {/* Blue Banner Content
-            - `relative z-10` to sit below the image.
-            - `pr-64` (and variants) creates empty space on the right for the image.
-          */}
-          <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-6 min-h-[160px] p-8 md:p-12 pr-8 md:pr-64 rounded-3xl bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-950/30 dark:to-cyan-950/30 shadow-lg">
-            
-            {/* Text */}
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center sm:text-left">
-              Looking to Level Up Your Team?
-            </h2>
-            
-            {/* Button */}
-            <Button size="lg" className="flex-shrink-0">
-              Contact Us
-            </Button>
+            {/* Right Image Area - "Pop Out" Effect */}
+            <div className="relative w-1/5   flex justify-center md:justify-end self-end">
+              {/* Glow Effect */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-400/20 blur-3xl rounded-full -z-10"></div>
+              
+              {/* Image with negative margin on desktop to pop out top */}
+              <img
+                src="/girlthump.png"
+                alt="Team member leveling up"
+                className="w-auto max-w-[280px] md:max-w-[380px] lg:max-w-[450px] h-auto object-contain md:-mt-24 md:-mr-4 lg:-mt-32"
+              />
+            </div>
+
           </div>
-          
         </div>
       </div>
     </section>

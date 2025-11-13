@@ -13,6 +13,13 @@ import {
   Building,
   Icon,
 } from 'lucide-react';
+import AceProLogo1 from '@/components/ui/aceprologo1';
+import Aceprologo2 from '@/components/ui/aceprologo2';
+import Aceprologo3 from '@/components/ui/aceprologo3';
+import Aceprologo7 from '@/components/ui/aceprologo7';
+import AceproLogo4 from '@/components/ui/aceprologo4';
+import Aceprologo5 from '@/components/ui/aceprologo5';
+import Aceprologo6 from '@/components/ui/aceprologo6';
 
 // --- Data for the features grid ---
 // Using an array of objects to keep the component JSX clean.
@@ -20,37 +27,37 @@ import {
 const edgeFeatures = [
   {
     id: 1,
-    icon: <Video className="h-6 w-6" />,
+    icon: <AceProLogo1 className="h-6 w-6" />,
     text: "Learn from Industry Experts",
   },
   {
     id: 2,
-    icon: <FileText className="h-6 w-6" />,
+    icon: <Aceprologo2 className="h-6 w-6" />,
     text: "Customized Learning Paths",
   },
   {
     id: 3,
-    icon: <TrendingUp className="h-6 w-6" />,
+    icon: <Aceprologo3 className="h-6 w-6" />,
     text: "Proven Track Record of Success",
   },
   {
     id: 4,
-    icon: <Award className="h-6 w-6" />,
+    icon: <AceproLogo4 className="h-6 w-6" />,
     text: "Achievements Rate of 94%",
   },
   {
     id: 5,
-    icon: <Globe className="h-6 w-6" />,
+    icon: <Aceprologo5 className="h-6 w-6" />,
     text: "Global Presence & Perspective",
   },
   {
     id: 6,
-    icon: <Briefcase className="h-6 w-6" />,
+    icon: <Aceprologo6 className="h-6 w-6" />,
     text: "Practical Approach to Learning",
   },
   {
     id: 7,
-    icon: <Users className="h-6 w-6" />,
+    icon: <Aceprologo7 className="h-6 w-6" />,
     text: "Client Centric Focus",
   },
   {
@@ -70,10 +77,7 @@ const edgeFeatures = [
   },
 ];
 
-/**
- * FeatureItem Component
- * A small reusable component for each item in the grid.
- */
+
 interface FeatureItemProps {
   icon: React.ReactElement;
   text: string;
@@ -100,16 +104,16 @@ const FeatureItem: React.FC<FeatureItemProps> = ({ icon, text }) => (
 export function AceproEdgeSection() {
   return (
     // Section wrapper with padding and a light background
-    <section className="py-16 bg-slate-50 dark:bg-slate-950">
+    <section className="my-16 rounded-[20px] bg-[#F6F6F6] dark:bg-slate-950">
       <div className="container mx-auto px-4">
         
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+        <h2 className="text-3xl pt-[24px] md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
           Acepro Edge
         </h2>
 
         {/* Main Content Card */}
-        <Card className="rounded-2xl shadow-xl">
+        <Card className="rounded-2xl mb-[24px]  scale-[0.97] shadow-xl">
           <CardContent className="p-8 md:p-12">
             {/* Grid Container */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-8">

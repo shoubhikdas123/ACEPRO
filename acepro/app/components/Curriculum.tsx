@@ -70,19 +70,19 @@ export function CurriculumSection() {
           - `bg-background` gives it the white card look
           - `rounded-2xl` and `shadow-xl` match the outer container style
         */}
-        <div className="bg-background dark:bg-slate-900 rounded-2xl shadow-xl p-6 md:p-10">
+        <div className="dark:bg-slate-900 rounded-2xl shadow-xl p-6 md:p-10">
           
           <Accordion
             type="single"
             collapsible
             defaultValue="item-1" // First item is open by default
-            className="w-full"
+            className="w-full "
           >
             {curriculumData.map((item) => (
               <AccordionItem
                 key={item.id}
                 value={item.id}
-                className="mb-4 border rounded-lg shadow-sm data-[state=open]:bg-red-50 data-[state=open]:border-red-200 dark:data-[state=open]:bg-red-950/30 dark:data-[state=open]:border-red-800/40"
+                className="mb-4 rounded-lg shadow-sm border border-gray-200 data-[state=open]:border-[#FFABAB] data-[state=open]:bg-white dark:data-[state=open]:bg-slate-800 dark:data-[state=open]:border-red-800/40"
               >
                 <AccordionTrigger className="p-5 font-semibold text-base md:text-lg hover:no-underline">
                   {item.title}
@@ -90,9 +90,9 @@ export function CurriculumSection() {
                 <AccordionContent className="pt-0 pb-4 px-5">
                   <ul className="space-y-3 pl-2">
                     {item.subItems.map((subItem, index) => (
-                      <li key={index} className="flex items-center gap-3">
+                      <li key={index} className="flex  items-center gap-3">
                         <Play className="h-4 w-4 flex-shrink-0 fill-current text-gray-600 dark:text-gray-400" />
-                        <span className="text-gray-700 dark:text-gray-300">
+                        <span className="text-[18px] text-[#676B72]  dark:text-gray-300">
                           {subItem}
                         </span>
                       </li>
@@ -105,7 +105,7 @@ export function CurriculumSection() {
 
           {/* Download Button */}
           <div className="text-center mt-8">
-            <Button size="lg">
+            <Button className="w-[218px] rounded-[4px] bg-[#016FC0]">
               Download Curriculum
             </Button>
           </div>

@@ -16,10 +16,10 @@ const designations = [
 
 // Placeholder logos
 const companyLogos = [
-  { src: "/logos/american-express.svg", alt: "American Express", className: "text-blue-600 font-bold" },
-  { src: "/logos/wipro.svg", alt: "Wipro", className: "text-cyan-500 font-bold" },
-  { src: "/logos/honeywell.svg", alt: "Honeywell", className: "text-red-600 font-bold" },
-  { src: "/logos/accenture.svg", alt: "Accenture", className: "text-purple-600 font-bold" },
+  { src: "/american.png", alt: "American Express", className: "w-4" },
+  { src: "/wipro.png", alt: "Wipro", className: "" },
+  { src: "/honeywell.png", alt: "Honeywell", className: "w-6" },
+  { src: "/accenture.png", alt: "Accenture", className: "w-36 h-36" },
 ];
 
 /**
@@ -31,13 +31,13 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
   const currencySymbol = currency === 'INR' ? '₹' : '$';
 
   return (
-    <Card className="overflow-hidden shadow-lg">
+    <Card className="overflow-hidden scale-[0.98]  ml-[12px] mb-[12px] p-0 ">
       <CardContent className="p-0">
         {/* Table Header */}
-        <div className="grid grid-cols-3 gap-4 p-6 border-b bg-slate-50 dark:bg-slate-800">
-          <h3 className="font-semibold text-lg">Designation</h3>
-          <h3 className="font-semibold text-lg text-center">Annual Salary ({currency})</h3>
-          <h3 className="font-semibold text-lg text-center">Hiring Companies</h3>
+        <div className="grid grid-cols-3  p-6 border-b-[1px] border-[#DCE7EF] bg-[white] dark:bg-slate-800">
+          <h3 className="font-semibold text-center text-lg border-bottom-[1px] border-[#DCE7EF]">Designation</h3>
+          <h3 className="font-semibold text-center text-lg border-bottom-[1px] border-[#DCE7EF] text-center">Annual Salary ({currency})</h3>
+          <h3 className="font-semibold text-center text-lg border-bottom-[1px] border-[#DCE7EF] text-center">Hiring Companies</h3>
         </div>
 
         {/* Table Body */}
@@ -49,11 +49,11 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
                 key={index}
                 className={cn(
                   "p-6",
-                  desg.active && "bg-blue-50 dark:bg-blue-900/30",
+                  desg.active && "bg-blue-50  dark:bg-blue-900/30 font-medium text-[#016FC0]",
                   index < designations.length - 1 && "border-b dark:border-slate-700"
                 )}
               >
-                <span className="font-medium text-gray-800 dark:text-gray-200">{desg.name}</span>
+                <span className="font-regular pl-4 text-[14px] ">{desg.name}</span>
               </div>
             ))}
           </div>
@@ -64,17 +64,17 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
               {/* Min Bar */}
               <div className="flex flex-col items-center text-center">
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{currencySymbol}20L</span>
-                <div className="w-10 md:w-12 h-24 bg-blue-200 dark:bg-blue-800 rounded-t-md"></div>
+                <div className="w-10 md:w-12 h-24 bg-blue-200 dark:bg-blue-800 "></div>
               </div>
               {/* Avg Bar */}
               <div className="flex flex-col items-center text-center">
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{currencySymbol}20L</span>
-                <div className="w-10 md:w-12 h-36 bg-blue-600 dark:bg-blue-500 rounded-t-md"></div>
+                <div className="w-10 md:w-12 h-36 bg-blue-600 dark:bg-blue-500 "></div>
               </div>
               {/* Max Bar */}
               <div className="flex flex-col items-center text-center">
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{currencySymbol}20L</span>
-                <div className="w-10 md:w-12 h-24 bg-blue-200 dark:bg-blue-800 rounded-t-md"></div>
+                <div className="w-10 md:w-12 h-24 bg-blue-200 dark:bg-blue-800 "></div>
               </div>
             </div>
             {/* Axis and Labels */}
@@ -118,30 +118,30 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
 export function BenefitsSection() {
   return (
     // Section wrapper with the light cream background
-    <section className="py-16 bg-amber-50 dark:bg-slate-950">
+    <section className=" mt-[48px] pb-[12px] rounded-[20px] bg-[#FEF7EA] dark:bg-slate-950">
       <div className="container mx-auto px-4">
         
         {/* Introduction Text */}
         <div className="max-w-4xl mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-[24px] ml-[24px] mt-[24px] pt-[36px]  font-bold text-gray-900 dark:text-white mb-6">
             How PMP Boosts your Salary and Opportunities
           </h2>
-          <div className="space-y-4 text-gray-700 dark:text-gray-300">
+          <div className="space-y-4 ml-[24px] text-[#676B72] leading-[26px] dark:text-gray-300">
             <p>
-              Recognized globally, the PMP® certification positions you for leadership roles in high-impact industries such as IT, finance, manufacturing, and healthcare. PMP® certified professionals consistently drive project efficiency, stakeholder satisfaction, and command premium compensation.
+              Recognized globally, the PMP<span className="text-[12px] top-[-5px] relative">®</span>certification positions you for leadership roles in high-impact industries such as IT, finance, manufacturing, and healthcare. PMP® certified professionals consistently drive project efficiency, stakeholder satisfaction, and command premium compensation.
             </p>
             <p>
-              "PMP® certified professionals earn 16% more globally (PMI report)"
+              "PMP<span className="text-[12px] top-[-5px] relative">®</span> certified professionals earn 16% more globally (PMI report)"
             </p>
             <p>
-              "Median PMP® salary in the U.S. is 32% higher"
+              "Median PMP<span className="text-[12px] top-[-5px] relative">®</span> salary in the U.S. is 32% higher"
             </p>
           </div>
         </div>
 
         {/* Salary Tables Container */}
         <div className="space-y-8">
-          <SalaryTable currency="INR" />
+          <SalaryTable  currency="INR" />
           <SalaryTable currency="USD" />
         </div>
         

@@ -46,7 +46,7 @@ function ScheduleSidebarCard() {
         {/* Instructor */}
         <div className="flex items-center gap-3 mb-3">
           <Avatar className="h-10 w-10">
-            <AvatarImage src="https://github.com/shadcn.png" alt="Mr. Pramod" />
+            <AvatarImage className="object-cover" src="/mrpramod.jpg" alt="Mr. Pramod" />
             <AvatarFallback>MP</AvatarFallback>
           </Avatar>
           <div>
@@ -75,9 +75,9 @@ function ScheduleSidebarCard() {
               ₹7,000
             </span>
           </div>
-          <div className="flex items-center justify-between">
-            <p className="text-xs text-muted-foreground">(Excl all taxes)</p>
-            <div className="flex items-center gap-1.5 text-destructive font-medium text-sm">
+          <div className=" flex ">
+            <p className="text-[14px]  mr-2 text-muted-foreground">(Excl all taxes)</p>
+            <div className="flex w-1/2 items-center text-destructive font-medium text-sm">
               <RunClock/>
               <span>5 Seats Available</span>
             </div>
@@ -106,7 +106,7 @@ function ScheduleSidebarCard() {
  */
 function BrochureSidebarCard() {
   return (
-    <Card className="rounded-2xl shadow-lg border-4 border-dashed border-gray-800 dark:border-gray-600 overflow-hidden">
+    <Card className="rounded-2xl shadow-lg   dark:border-gray-600 overflow-hidden">
       <CardContent className="p-8 flex flex-col items-center text-center">
         {/* Icon */}
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 mb-4">
@@ -153,7 +153,7 @@ export function CourseSidebar() {
   }, []);
 
   return (
-    <div className={isSticky ? "sticky top-24 w-full max-w-sm space-y-6" : "top-24 w-full max-w-sm space-y-6"}>
+    <div className={isSticky ? "sticky top-24 w-full scale-[0.95] max-w-sm space-y-6" : "top-24 scale-[0.95] w-full max-w-sm space-y-6"}>
       <ScheduleSidebarCard />
       <BrochureSidebarCard />
     </div>

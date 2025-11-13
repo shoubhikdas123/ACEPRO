@@ -32,9 +32,9 @@ export function CertificateSection() {
             <div className="flex items-center justify-center">
               <img
                 // Using a placeholder that resembles the certificate
-                src="https://via.placeholder.com/600x400/ffffff/f472b6?text=CERTIFICATE" 
+                src="/Certificate.png" 
                 alt="Course Certificate"
-                className="rounded-lg shadow-xl w-full max-w-lg border-4 border-white dark:border-gray-800"
+                className="rounded-lg shadow-xl md:w-[433px] sm:w-[336px] max-w-lg border-4 border-white dark:border-gray-800"
               />
             </div>
 

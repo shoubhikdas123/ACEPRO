@@ -23,32 +23,20 @@ export function ClientLogosSection() {
     <section className="py-16">
       
       {/* Top Part: Title with dark background */}
-      <div className="bg-gray-900 dark:bg-gray-950 py-12">
+      <div className=" dark:bg-gray-950 py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1E293B]">
             Our clients benefiting from <br /> ACEPRO, Excel in Top companies
           </h2>
         </div>
       </div>
 
       {/* Bottom Part: Logos with light background */}
-      <div className="bg-white dark:bg-slate-800 py-12 shadow-inner">
-        <div className="container mx-auto px-4">
-          {/* Flex container for logos */}
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:justify-around">
-            {clientLogos.map((logo) => (
-              <img
-                key={logo.alt}
-                src={logo.src} // <-- REPLACE with your actual logo paths
-                alt={logo.alt}
-               
-                // Add a grayscale filter for dark mode to maintain contrast
-                className="h-10 md:h-12 w-auto object-contain dark:invert dark:grayscale"
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <img
+        src="/client.png"
+        alt="Client Logos Background"
+        className="w-full h-[106px] object-cover"
+      />
       
     </section>
   );
