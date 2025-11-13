@@ -34,7 +34,7 @@ export function CertificateSection() {
                 // Using a placeholder that resembles the certificate
                 src="/Certificate.png" 
                 alt="Course Certificate"
-                className="rounded-lg shadow-xl md:w-[433px] sm:w-[336px] max-w-lg border-4 border-white dark:border-gray-800"
+                className="rounded-lg shadow-xl scale-75 sm:scale-90 md:scale-100 md:w-[433px] sm:w-[336px] max-w-lg border-4 border-white dark:border-gray-800"
               />
             </div>
 

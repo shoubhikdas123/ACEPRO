@@ -31,11 +31,11 @@ const GlobeIcon = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement
 
 export default function HeroSection() {
   return (
-    <div className=" items-center justify-center min-h-screen bg-gray-50">
-      <div className="relative w-full ">
-        <div className="">
+    <div className="flex items-center justify-center sm:h-[434px] md:min-h-screen lg:min-h-screen bg-gray-50">
+      <div className="relative w-full h-full">
+        <div className="h-full">
           <Image src="/image.png" width={1000} height={1000} alt="Hero Image" className="absolute hidden md:inline z-20 top-[-150px] object-cover object-top" />
-          <Image src="/thumbsupman.png" width={500} height={600} alt="Project Manager giving a thumbs up" className="absolute inline md:hidden scale-[0.90] top-[-20%] object-cover " />
+          <Image src="/thumbsupman.png" width={500} height={600} alt="Project Manager giving a thumbs up" className=" inline md:hidden scale-[0.90] top-[-20%] object-cover " />
           {/* Blue SVG Background - positioned absolutely */}
           {/* <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10" style={{ width: '450px', height: '408px' }}>
             <HeroImg className="w-full relative right-20 top-20 h-full" />

@@ -16,17 +16,17 @@ const socialpics=[
 ]
 export default function Hero() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen min-w-full bg-white">
       {/* Top Banner */}
-      <div className="bg-blue-600 text-white h-[50px] py-[7px] px-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-4 text-sm md:text-base">
-          <Image className='transform -scale-x-100 -rotate-40' src={"/horn.png"} width={37.65} height={37.65} alt="" />
+      <div className="bg-blue-600 w-full text-white h-[50px] py-[7px] px-4">
+        <div className="  flex items-center justify-center gap-4 text-sm md:text-base">
+          <Image className='hidden md:block transform -scale-x-100 -rotate-40' src={"/horn.png"} width={37.65} height={37.65} alt="" />
           <span className="font-bold text-[16px] px-[8px]">Kickstart Your Learning Journey — Now Up to 50% Off</span>
           <Button variant="secondary" size="sm" className="bg-white rounded-[3px] text-blue-600 hover:bg-gray-100 px-[20px] py-[8px] font-semibold">
             Grab Now
           </Button>
           <span className="font-bold px-[8px]">Ends Soon!</span>
-          <Image className='transform  rotate-40' src={"/horn.png"} width={37.5} height={37.5} alt="" />
+          <Image className='hidden md:block transform  rotate-40' src={"/horn.png"} width={37.5} height={37.5} alt="" />
         </div>
       </div>
 
@@ -37,14 +37,14 @@ export default function Hero() {
           <Image className='pb-[32px] lg:ml-[60px] ml-[12px]'  width={148} height={32} src="/logo.png" alt={''}/>
      
 
-        <div className="grid lg:grid-cols-2 gap-3 lg:ml-[60px] ml-[12px]">
+        <div className="grid lg:grid-cols-2 gap-3 lg:ml-[60px] ml-[12px] mr-[12px] lg:mr-0">
           {/* Left Column */}
           <div>
             <div className="mb-2 text-[15px] text-[#016FC0] ">
               PROJECT MANAGEMENT CERTIFICATION COURSE
             </div>
 
-            <h1 className="text-[30px] md:text-[48px] lg:text-[48px] font-bold text-[#1E293B] mb-6 leading-tight">
+            <h1 className="text-[24px] sm:text-[30px] md:text-[48px] lg:text-[48px] font-bold text-[#1E293B] mb-6 leading-tight">
               Project Management Professional (PMI-PMP)
             </h1>
 
@@ -67,7 +67,7 @@ export default function Hero() {
             </div>
 
             {/* Benefits List */}
-            <div className="w-[639px] mb-4 h-[106px]">
+            <div className="w-full mb-4">
               <div className="flex mb-[10px] items-center ">
                 <SVGComponent/>
                 <p className="text-[#7C7E83] ml-2   text-[16px]">Get a Globally Recognized PMP<span className='text-[10px] relative top-[-10px]'>®</span>Certification Accepted in Over 200 Countries</p>

@@ -67,7 +67,7 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
     <Card className="rounded-2xl shadow-lg overflow-hidden border border-gray-200">
       <CardContent className="p-6">
         {/* Top Section with Tags and Discount Badge */}
-        <div className="flex justify-between  items-start mb-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
           {/* Tags */}
           <div className="flex flex-wrap gap-2">
             <Badge
@@ -93,11 +93,11 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
         </div>
 
         {/* Main Content Section */}
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row lg:gap-8">
           {/* Left Column */}
-          <div className="flex-1 ">
+          <div className="flex-1 mb-6 lg:mb-0">
             {/* Date and Time */}
-            <h3 className="text-2xl  font-bold text-gray-900 dark:text-white mb-1">
+            <h3 className="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-1">
               {item.date}
             </h3>
             <p className="text-sm border-b-2 pb-2 text-muted-foreground mb-4">
@@ -123,11 +123,11 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col items-end justify-between">
+          <div className="flex flex-col w-full lg:w-auto lg:items-end lg:justify-between">
             {/* Price Section */}
-            <div className="text-right mb-4">
-              <div className="flex items-baseline justify-end gap-2 mb-1">
-                <span className="text-3xl font-extrabold text-gray-900 dark:text-white">
+            <div className="text-left lg:text-right mb-4">
+              <div className="flex flex-col sm:flex-row items-baseline gap-2 mb-1">
+                <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">
                   ₹{item.price}
                 </span>
                 <span className="text-lg text-muted-foreground line-through">
@@ -136,17 +136,17 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
               </div>
               <p className="text-xs text-muted-foreground">(Excl all taxes)</p>
             </div>
-              <div className="flex gap-3 mt-6">
-          <Button variant="outline" className="flex-1 text-[#016FC0] border-[#016FC0] border-2 rounded-md font-semibold hover:bg-blue-50">
-            View Dates
-          </Button>
-          <Button className="flex-1 bg-[#016FC0] rounded-md font-semibold hover:bg-[#014A99]">
-            Enroll Now
-          </Button>
-        </div>
+            <div className="flex flex-row gap-3 w-full lg:w-auto mt-6">
+              <Button variant="outline" className="flex-1 text-[#016FC0] border-[#016FC0] border-2 rounded-md font-semibold hover:bg-blue-50">
+                View Dates
+              </Button>
+              <Button className="flex-1 bg-[#016FC0] rounded-md font-semibold hover:bg-[#014A99]">
+                Enroll Now
+              </Button>
+            </div>
             {/* Urgency Message */}
             {item.seatsAvailable > 0 && (
-              <div className="flex items-center gap-1.5 text-destructive font-medium text-sm">
+              <div className="flex items-center gap-1.5 text-destructive font-medium text-sm mt-4 lg:mt-2">
                 <RunClock className="h-4 w-4" />
                 <span>{item.seatsAvailable} Seats Available</span>
               </div>
