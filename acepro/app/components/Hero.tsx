@@ -34,10 +34,10 @@ export default function Hero() {
       <div className="  py-8">
         {/* Logo */}
        
-          <Image className='pb-[32px] ml-[60px]'  width={148} height={32} src="/logo.png" alt={''}/>
+          <Image className='pb-[32px] lg:ml-[60px] ml-[12px]'  width={148} height={32} src="/logo.png" alt={''}/>
      
 
-        <div className="grid lg:grid-cols-2 gap-3  ml-[60px] ">
+        <div className="grid lg:grid-cols-2 gap-3 lg:ml-[60px] ml-[12px]">
           {/* Left Column */}
           <div>
             <div className="mb-2 text-[15px] text-[#016FC0] ">
@@ -86,6 +86,11 @@ export default function Hero() {
               </div>
             </div>
 
+            {/* Hero Image - Mobile Only */}
+            <div className="lg:hidden mb-8">
+              <HeroSection/>
+            </div>
+
             {/* Social Proof */}
             <div className="flex items-center gap-6 mt-8 mb-8">
               <div className="flex -space-x-3">
@@ -127,20 +132,22 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-blue-600 rounded-[4px] hover:bg-blue-700 text-white px-8">
+            <div className="flex flex-col md:flex-row gap-4">
+              <Button size="lg" className="bg-blue-600 rounded-[4px] hover:bg-blue-700 text-white px-8 w-full md:w-auto">
 
                 View Schedules
               </Button>
-              <Button size="lg" variant="outline" className="border-blue-600 rounded-[4px] text-blue-600 hover:bg-blue-50 px-8">
+              <Button size="lg" variant="outline" className="border-blue-600 rounded-[4px] text-blue-600 hover:bg-blue-50 px-8 w-full md:w-auto">
            
                 Download Brochure
               </Button>
             </div>
           </div>
 
-          {/* Right Column - Hero Image */}
-          <HeroSection/>
+          {/* Right Column - Hero Image (Desktop Only) */}
+          <div className="hidden lg:block">
+            <HeroSection/>
+          </div>
         </div>
       </div>
     </div>
