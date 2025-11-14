@@ -5,6 +5,7 @@ import { MoveLeft, MoveRight } from 'lucide-react';
 import Image from 'next/image';
 const SliderSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(4);
   const sliderRef = useRef<HTMLDivElement | null>(null);
   
   const slides = [
@@ -35,7 +36,25 @@ const SliderSection = () => {
     }
   ];
 
-  const itemsToShow = 4;
+  useEffect(() => {
+    const updateItemsToShow = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setItemsToShow(1);
+      } else if (width < 768) {
+        setItemsToShow(2);
+      } else if (width < 1024) {
+        setItemsToShow(3);
+      } else {
+        setItemsToShow(4);
+      }
+    };
+
+    updateItemsToShow();
+    window.addEventListener('resize', updateItemsToShow);
+    return () => window.removeEventListener('resize', updateItemsToShow);
+  }, []);
+
   const maxIndex = Math.max(0, slides.length - itemsToShow);
 
   const scrollToIndex = (index: number) => {
@@ -43,9 +62,12 @@ const SliderSection = () => {
     setCurrentIndex(newIndex);
     
     if (sliderRef.current) {
-      const slideWidth = sliderRef.current.offsetWidth / itemsToShow;
+      const containerWidth = sliderRef.current.offsetWidth;
+      const slideWidth = containerWidth / itemsToShow;
+      const gap = 24; // gap-6 = 1.5rem = 24px
+      const scrollAmount = (slideWidth + gap) * newIndex;
       sliderRef.current.scrollTo({
-        left: slideWidth * newIndex,
+        left: scrollAmount,
         behavior: 'smooth'
       });
     }
@@ -60,20 +82,21 @@ const SliderSection = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl ml-[20px] mx-auto px-4 py-12">
-      {/* Header with Navigation */}
-      <div className="flex items-center justify-between mb-12">
-        <h1 className="text-[36px] md:text-[36px] font-bold text-[#1E293B] text-center flex-1">
-          Your Path to PMP<span className="text-[24px] relative top-[-10px]">®</span> Success - Structured,
-          <br />
-          Smart, Supported
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:ml-[20px] py-6 sm:py-8 md:py-12">
+      {/* Header with Navigation (Desktop) */}
+      <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8 md:mb-12 gap-4 sm:gap-0">
+        <h1 className="text-[24px] sm:text-[28px] md:text-[36px] font-bold text-[#1E293B] text-center sm:text-left flex-1">
+          Your Path to PMP<span className="text-[16px] sm:text-[20px] md:text-[24px] relative top-[-8px] sm:top-[-10px]">®</span> Success - Structured,
+          <br className="hidden sm:block" />
+          <span className="sm:inline"> Smart, Supported</span>
         </h1>
         
-        <div className="flex gap-3 ml-4">
+        {/* Desktop Navigation Buttons */}
+        <div className="hidden md:flex gap-3 ml-4">
           <button
             onClick={goToPrevious}
             disabled={currentIndex === 0}
-            className="w-[53px] h-[30px] rounded-[30px] border-2 border-blue-500 flex items-center bg-[#DEF1FF]  justify-center text-blue-500 hover:bg-blue-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+            className="w-[53px] h-[30px] rounded-[30px] border-2 border-blue-500 flex items-center bg-[#DEF1FF] justify-center text-blue-500 hover:bg-blue-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
             aria-label="Previous slide"
           >
             <MoveLeft className="w-6 h-6" />
@@ -93,50 +116,59 @@ const SliderSection = () => {
       <div className="relative overflow-hidden">
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-hidden scroll-smooth"
+          className="flex gap-3 sm:gap-4 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {slides.map((slide, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[250px]  border-[0.75px] h-[284px] rounded-[20px]"
-            
+              className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[250px] border-[0.75px] h-auto sm:min-h-[260px] md:h-[284px] rounded-[16px] sm:rounded-[20px] snap-start flex flex-col"
             >
-             
-                  <Image src={slide.image} alt={slide.title} width={250} height={160} className="object-contain rounded-t-[20px]" />
-          
-                
+              <div className="relative w-full h-auto sm:h-[150px] md:h-[160px]">
+                <Image 
+                  src={slide.image} 
+                  alt={slide.title} 
+                  width={250}
+                  height={160}
+                  className="w-full h-auto object-contain rounded-t-[16px] sm:rounded-t-[20px]" 
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 250px"
+                />
+              </div>
 
-                <div className="p-4">
-                  <h3 className="text-[18px] font-semibold text-[#1E293B] text-center leading-snug">
-                    {slide.title}
-                  </h3>
-              
+              <div className="p-3 sm:p-4">
+                <h3 className="text-[14px] sm:text-[16px] md:text-[18px] font-semibold text-[#1E293B] text-center leading-snug">
+                  {slide.title}
+                </h3>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Mobile Responsive Note */}
+      {/* Mobile Navigation Buttons Below Cards */}
+      <div className="flex md:hidden justify-center gap-3 mt-6 sm:mt-8">
+        <button
+          onClick={goToPrevious}
+          disabled={currentIndex === 0}
+          className="w-[53px] h-[30px] rounded-[30px] border-2 border-blue-500 flex items-center bg-[#DEF1FF] justify-center text-blue-500 hover:bg-blue-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          aria-label="Previous slide"
+        >
+          <MoveLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={goToNext}
+          disabled={currentIndex >= maxIndex}
+          className="w-[53px] h-[30px] rounded-[30px] border-2 border-blue-500 flex items-center bg-[#DEF1FF] justify-center text-blue-500 hover:bg-blue-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+          aria-label="Next slide"
+        >
+          <MoveRight className="w-6 h-6" />
+        </button>
+      </div>
+
+      {/* Hide scrollbar for webkit browsers */}
       <style jsx>{`
-        @media (max-width: 1024px) {
-          .flex-shrink-0 {
-            min-width: calc(33.333% - 16px) !important;
-            width: calc(33.333% - 16px) !important;
-          }
-        }
-        @media (max-width: 768px) {
-          .flex-shrink-0 {
-            min-width: calc(50% - 12px) !important;
-            width: calc(50% - 12px) !important;
-          }
-        }
-        @media (max-width: 640px) {
-          .flex-shrink-0 {
-            min-width: 100% !important;
-            width: 100% !important;
-          }
+        div::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </div>
