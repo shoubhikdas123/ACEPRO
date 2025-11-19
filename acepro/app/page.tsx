@@ -27,24 +27,31 @@ export default function Home() {
       <SliderSection />
       <AddonServices />
       <ExpertMentorCTA />
-      <div className="ml-4">
+      <div className="">
         <StickyCourseNav />
         <div className="w-full flex flex-col md:flex-row">
           <div className="w-full md:w-2/3 md:mr-2 md:ml-6">
             <OverviewSection />
             <TakeawaysSection />
+            {/* Mobile sidebar */}
+            <div className="block md:hidden mb-6">
+              <CourseSidebar />
+            </div>
             <BenefitsSection />
             <AceproEdgeSection />
-            <ScheduleCard/>
-            <CurriculumSection/>
+            <ScheduleCard />
+            <CurriculumSection />
             <CourseAudienceSection />
             <InstructorsSection />
           </div>
-          <div className="w-full md:w-1/3 md:mr-4 mt-8 md:mt-0"> <CourseSidebar /></div>
+          {/* Desktop sidebar */}
+          <div className="hidden md:block w-full md:w-1/3 md:mr-4 mt-8 md:mt-0">
+            <CourseSidebar />
+          </div>
         </div>
       </div>
       <CertificateSection />
-      <ClientLogosSection/>
+      <ClientLogosSection />
       <TestimonialsSection />
       <FaqSection />
       <TeamLevelUpCTA />
