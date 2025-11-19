@@ -21,8 +21,8 @@ const services = [
     id: 1,
     imageUrl: "/addon1.png", // Placeholder image
     tags: [
-      { text: "Live Classes", variant: "default",background:"#DEF1FF" },
-      { text: "Instructor Led Sessions", variant: "secondary",background:"#FCEAEA" },
+      { text: "Live Classes", variant: "default", background: "#DEF1FF" },
+      { text: "Instructor Led Sessions", variant: "secondary", background: "#FCEAEA" },
     ],
     title: "PMP Professional Course Project Management Exam Prep",
     description: "Lorem ipsum dolor sit amet consectetur. Augue sed odio augue urna nisl fusce. Nibh pretium consectetur...",
@@ -37,8 +37,8 @@ const services = [
     id: 2,
     imageUrl: "addon2.png", // Placeholder image
     tags: [
-      { text: "Offers", variant: "default", background:"#DEF1FF" },
-      { text: "Mock Exam", variant: "secondary" ,background:"#FCEAEA" },
+      { text: "Offers", variant: "default", background: "#DEF1FF" },
+      { text: "Mock Exam", variant: "secondary", background: "#FCEAEA" },
     ],
     title: "PMI-PMP Question Bank",
     description: "Lorem ipsum dolor sit amet consectetur. Augue sed odio augue urna nisl fusce. Nibh pretium consectetur...",
@@ -53,13 +53,13 @@ const services = [
     id: 3,
     imageUrl: "/ddon3.png", // Placeholder image
     tags: [
-      { text: "Offers", variant: "default" ,background:"#DEF1FF" },
-      { text: "Expert Guidance", variant: "destructive",background:"#FCEAEA" }, // Use 'destructive' for the red-like tag
+      { text: "Offers", variant: "default", background: "#DEF1FF" },
+      { text: "Expert Guidance", variant: "destructive", background: "#FCEAEA" }, // Use 'destructive' for the red-like tag
     ],
     title: "PMI-PMP Application Review Service",
     description: "Lorem ipsum dolor sit amet consectetur. Augue sed odio augue urna nisl fusce. Nibh pretium consectetur...",
     features: [
-     { icon: <QuestionLogo className="h-4 w-4 text-destructive" />, text: "Lorem ipsum dolor sit amet consectetu augue" },
+      { icon: <QuestionLogo className="h-4 w-4 text-destructive" />, text: "Lorem ipsum dolor sit amet consectetu augue" },
       { icon: <ListLogo className="h-4 w-4 text-destructive" />, text: "Lorem ipsum dolor sit amet consectetu augue" },
       { icon: <Clock className="h-4 w-4 text-destructive" />, text: "Lorem ipsum dolor sit amet consectetu augue" },
     ],
@@ -78,7 +78,7 @@ const services = [
 export function AddonServices() {
   return (
     <section className=" py-16">
-      <div className="container mx-[36px] ">
+      <div className="container lg:mx-[36px] ">
         <h2 className="text-[36px] text-[#1E293B] font-bold  mb-12">
           Add-on Services
         </h2>

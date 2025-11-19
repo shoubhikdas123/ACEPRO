@@ -31,7 +31,7 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
   const currencySymbol = currency === 'INR' ? '₹' : '$';
 
   return (
-    <Card className="overflow-hidden scale-[0.98]  ml-[12px] mb-[12px] p-0 ">
+    <Card className="overflow-hidden scale-[0.98]  lg:ml-[12px] mb-[12px] p-0 ">
       <CardContent className="p-0">
         {/* Table Header */}
         <div className="grid grid-cols-3  p-6 border-b-[1px] border-[#DCE7EF] bg-[white] dark:bg-slate-800">
@@ -99,8 +99,8 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
                   src={logo.src} // Placeholder path - replace with your actual logo paths
                   alt={logo.alt}
                   className="h-8 w-auto object-contain"
-                  // Fallback text if images are broken
-                  
+                // Fallback text if images are broken
+
                 />
               ))}
             </div>
@@ -120,13 +120,13 @@ export function BenefitsSection() {
     // Section wrapper with the light cream background
     <section className=" mt-[48px] pb-[12px] rounded-[20px] bg-[#FEF7EA] dark:bg-slate-950">
       <div className="container mx-auto px-4">
-        
+
         {/* Introduction Text */}
         <div className="max-w-4xl mb-12">
-          <h2 className="text-[24px] ml-[24px] mt-[24px] pt-[36px]  font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-[24px] lg:ml-[24px] mt-[24px] pt-[36px]  font-bold text-gray-900 dark:text-white mb-6">
             How PMP Boosts your Salary and Opportunities
           </h2>
-          <div className="space-y-4 ml-[24px] text-[#676B72] leading-[26px] dark:text-gray-300">
+          <div className="space-y-4 lg:ml-[24px] text-[#676B72] leading-[26px] dark:text-gray-300">
             <p>
               Recognized globally, the PMP<span className="text-[12px] top-[-5px] relative">®</span>certification positions you for leadership roles in high-impact industries such as IT, finance, manufacturing, and healthcare. PMP® certified professionals consistently drive project efficiency, stakeholder satisfaction, and command premium compensation.
             </p>
@@ -141,10 +141,10 @@ export function BenefitsSection() {
 
         {/* Salary Tables Container */}
         <div className="space-y-8">
-          <SalaryTable  currency="INR" />
+          <SalaryTable currency="INR" />
           <SalaryTable currency="USD" />
         </div>
-        
+
       </div>
     </section>
   );
