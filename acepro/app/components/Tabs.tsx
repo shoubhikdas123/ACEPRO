@@ -17,7 +17,7 @@ const navItems = [
 // --- 2. The Sticky Navigation Component ---
 export default function StickyCourseNav() {
   const [activeTab, setActiveTab] = useState('overview');
-  
+
   // 1. Create a ref for the header element
   const headerRef = React.useRef<HTMLElement>(null);
 
@@ -50,7 +50,7 @@ export default function StickyCourseNav() {
     const handleScroll = () => {
       const instructorsSection = document.getElementById('instructor');
       // 2. Use the ref's current value
-      const navBar = headerRef.current; 
+      const navBar = headerRef.current;
 
       if (!instructorsSection || !navBar) return;
 
@@ -71,7 +71,7 @@ export default function StickyCourseNav() {
         }
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isSticky]); // Add isSticky as a dependency
@@ -79,16 +79,16 @@ export default function StickyCourseNav() {
   return (
     // 3. Assign the ref to the header element
     <header
-      ref={headerRef} 
+      ref={headerRef}
       className={
         isSticky
-          ? 'sticky top-0 z-50 ml-4 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60'
-          : 'w-full border-b ml-4 bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60'
+          ? 'sticky top-0 z-50 lg:ml-4 w-full border-b bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60'
+          : 'w-full border-b lg:ml-4 bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60'
       }
     >
-      <div className="container mx-auto flex h-12 md:h-16 items-center justify-between px-4">
+      <div className="container flex h-12 md:h-16 items-center justify-between px-4">
         {/* Mobile Navigation Links - Scrollable */}
-        <nav className="flex md:hidden w-full h-12 items-center overflow-x-auto scrollbar-hide gap-4 px-2">
+        <nav className="flex md:hidden flex-1 min-w-0 h-12 items-center overflow-x-auto scrollbar-hide gap-4 px-2">
           {navItems.map((item) => (
             <a
               key={item.id}
@@ -136,7 +136,7 @@ export default function StickyCourseNav() {
           <Button className='bg-[#016FC0] w-[120px] md:w-[169px] text-xs md:text-base px-3 md:px-6'>View Schedule</Button>
         </div>
       </div>
-      
+
       {/* Hide scrollbar for webkit browsers */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {

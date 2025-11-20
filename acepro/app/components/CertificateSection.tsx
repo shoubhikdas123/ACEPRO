@@ -9,15 +9,15 @@ export function CertificateSection() {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        
+
         {/* Main Container
           - Styled with a light blue gradient and rounded corners
         */}
         <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 p-8 md:p-12 shadow-lg">
-          
+
           {/* Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            
+
             {/* Left Column: Text Content */}
             <div className="md:pr-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
@@ -32,9 +32,9 @@ export function CertificateSection() {
             <div className="flex items-center justify-center">
               <img
                 // Using a placeholder that resembles the certificate
-                src="/Certificate.png" 
+                src="/Certificate.png"
                 alt="Course Certificate"
-                className="rounded-lg shadow-xl scale-75 sm:scale-90 md:scale-100 md:w-[433px] sm:w-[336px] max-w-lg border-4 border-white dark:border-gray-800"
+                className="rounded-lg shadow-xl scale-75 sm:scale-90 md:scale-100 md:w-[433px] sm:w-[336px] w-full h-auto max-w-lg border-4 border-white dark:border-gray-800"
               />
             </div>
 

@@ -84,13 +84,13 @@ export function AddonServices() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.id} className="flex rounded-top-[20px] rounded-bottom-0 flex-col overflow-hidden w-[390px] h-[600px] shadow-md p-0 m-0">
+            <Card key={service.id} className="flex rounded-top-[20px] rounded-bottom-0 flex-col overflow-hidden w-full max-w-[390px] h-[600px] shadow-md p-0 m-0">
               {/* Card Image */}
               <CardHeader className="m-0 p-0  ">
                 <img
                   src={service.imageUrl}
                   alt={service.title}
-                  className="w-full rounded-top-[20px] w-[450px] h-[250px] object-cover"
+                  className="w-full rounded-top-[20px] h-[250px] object-cover"
                 />
               </CardHeader>
 

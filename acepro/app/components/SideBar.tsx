@@ -62,7 +62,7 @@ function ScheduleSidebarCard() {
 
         {/* Price Section */}
         <div className="mb-4">
-          <div 
+          <div
             className=" h-6 mb-2 pl-4 w-24 text-white bg-no-repeat font-bold"
             style={{ backgroundImage: 'url(/50percent.png)' }}
           >  50% Off
@@ -78,7 +78,7 @@ function ScheduleSidebarCard() {
           <div className=" flex ">
             <p className="text-[14px]  mr-2 text-muted-foreground">(Excl all taxes)</p>
             <div className="flex w-1/2 items-center text-destructive font-medium text-sm">
-              <RunClock/>
+              <RunClock />
               <span>5 Seats Available</span>
             </div>
           </div>
@@ -88,7 +88,7 @@ function ScheduleSidebarCard() {
 
         {/* Action Buttons */}
         <div className="flex flex-col gap-3">
-          <Button size="lg" className="w-[343px] bg-[#016FC0] rounded-[4px]">
+          <Button size="lg" className="w-full bg-[#016FC0] rounded-[4px]">
             Enroll Now
           </Button>
           <Button variant="link" size="lg" className="w-full text-[#016FC0]">

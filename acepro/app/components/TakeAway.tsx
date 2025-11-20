@@ -27,17 +27,17 @@ export function TakeawaysSection() {
     // Section wrapper with padding and a light background
     <section className=" bg-[#F6F6F6] pb-[24px]  rounded-[20px] ">
       <div className="container   ">
-        
+
         {/* Section Heading */}
-        <div className="text-[24px] ml-[28px] pt-[28px]  font-bold text-[#1E293B] ">
+        <div className="text-[24px] pl-[28px] pt-[28px] font-bold text-[#1E293B] ">
           Takeaways From the Course
         </div>
 
         {/* Main Content Card: A flex container that wraps on mobile */}
         <div className="flex  scale-[0.95]  flex-col lg:flex-row bg-background dark:bg-slate-900   shadow-xl ">
-          
+
           {/* Left Side: List of Takeaways */}
-          <div className="w-full  lg:w-5/6  mt-[28px] ml-[28px]">
+          <div className="w-full lg:w-5/6 mt-[28px] pl-[28px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
               {takeaways.map((item) => (
                 <div key={item.id} className="flex text-[#60636A] items-start gap-3">
