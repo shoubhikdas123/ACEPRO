@@ -84,7 +84,7 @@ export function AddonServices() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.id} className="flex rounded-top-[20px] rounded-bottom-0 flex-col overflow-hidden w-full max-w-[390px] h-[600px] shadow-md p-0 m-0">
+            <Card key={service.id} className="flex rounded-top-[20px] rounded-bottom-0 flex-col overflow-hidden w-full max-w-[390px]  shadow-md p-0 m-0">
               {/* Card Image */}
               <CardHeader className="m-0 p-0  ">
                 <img
@@ -131,8 +131,8 @@ export function AddonServices() {
 
               {/* Card Footer (only shown if buttonText exists) */}
               {service.buttonText && (
-                <CardFooter className="p-6 pt-0">
-                  <Button className="w-full bg-[#016FC0]">{service.buttonText}</Button>
+                <CardFooter className="p-6  mb-4 pt-0">
+                  <Button className="w-full  bg-[#016FC0]">{service.buttonText}</Button>
                 </CardFooter>
               )}
             </Card>

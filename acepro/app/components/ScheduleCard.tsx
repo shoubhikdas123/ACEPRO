@@ -84,7 +84,7 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
             </Badge>
           </div>
           {/* 50% Off Badge */}
-          <div 
+          <div
             className="h-6 w-24 text-white bg-no-repeat font-bold flex items-center justify-center"
             style={{ backgroundImage: 'url(/50percent.png)', backgroundSize: 'contain' }}
           >
@@ -155,7 +155,7 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
         </div>
 
         {/* Action Buttons */}
-      
+
       </CardContent>
     </Card>
   );
@@ -168,20 +168,20 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
 export function ScheduleSection() {
   return (
     <section className="py-16 bg-white dark:bg-slate-950">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 bg-amber-50 dark:bg-slate-900 p-6 md:p-10 rounded-2xl">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
           Schedule
         </h2>
-        
+
         {/* Cards Container */}
-        <div className="bg-amber-50 dark:bg-slate-900 p-6 md:p-10 rounded-2xl">
+        <div className="">
           <div className="space-y-6">
             {scheduleData.map((item) => (
               <ScheduleCard key={item.id} item={item} />
             ))}
           </div>
         </div>
-        
+
       </div>
     </section>
   );
