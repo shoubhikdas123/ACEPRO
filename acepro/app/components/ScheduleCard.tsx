@@ -64,7 +64,7 @@ const scheduleData = [
  */
 function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
   return (
-    <Card className="rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+    <Card className="rounded-2xl shadow-lg overflow-hidden border border-[#028621]">
       <CardContent className="p-6">
         {/* Top Section with Tags and Discount Badge */}
         <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-4">
