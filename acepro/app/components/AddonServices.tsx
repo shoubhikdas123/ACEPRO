@@ -77,12 +77,12 @@ const services = [
  */
 export function AddonServices() {
   return (
-    <section className=" py-16">
-      <div className="container lg:mx-[36px] ">
-        <h2 className="text-[36px] text-[#1E293B] font-bold  mb-12">
+    <section className="py-16">
+      <div className="container lg:mx-[36px] px-4">
+        <h2 className="text-[36px] text-[#1E293B] font-bold mb-12 text-center">
           Add-on Services
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:justify-items-center">
           {services.map((service) => (
             <Card key={service.id} className="flex rounded-top-[20px] rounded-bottom-0 flex-col overflow-hidden w-full max-w-[390px]  shadow-md p-0 m-0">
               {/* Card Image */}

@@ -12,7 +12,7 @@ import Image from "next/image";
  */
 export function ExpertMentorCTA() {
   return (
-    <section className="container mx-auto my-32 px-4 py-12">
+    <section className="container  mx-auto my-32  py-12">
       <div className="relative h-auto md:h-[180px] flex flex-col md:flex-row justify-end bg-amber-100 dark:bg-neutral-800 rounded-2xl shadow-sm py-4 md:py-0">
         {/* Image Container
           Positioned absolutely to break the container's bottom boundary.
@@ -48,8 +48,8 @@ export function ExpertMentorCTA() {
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 dark:text-white text-center md:text-left">
             Book 1:1 call with our Expert Mentor
           </h2>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="flex-shrink-0 bg-[#016FC0] rounded-[4px] text-sm sm:text-base" // Prevents button from shrinking
           >
             Ask Questions
