@@ -82,7 +82,7 @@ export function AddonServices() {
         <h2 className="text-[36px] text-[#1E293B] font-bold mb-12 text-center">
           Add-on Services
         </h2>
-        <div className="flex flex-col items-center md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:justify-items-center">
+        <div className="flex flex-col  md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:justify-items-center">
           {services.map((service) => (
             <Card key={service.id} className="flex rounded-top-[20px] rounded-bottom-0 flex-col overflow-hidden w-full max-w-[390px]  shadow-md p-0 m-0">
               {/* Card Image */}
