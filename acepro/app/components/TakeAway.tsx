@@ -62,7 +62,7 @@ export function TakeawaysSection() {
             <img
               src="/manformal.png" // Placeholder image
               alt="Professional working on a laptop"
-              className=" h-[410px] mb-[24px] mt-[24px] ml-[48px] pr-[24px] object-cover min-h-[400px] "
+              className="w-full h-auto min-h-[300px] md:h-[410px] md:ml-[48px] md:pr-[24px] object-cover"
             />
           </div>
 
