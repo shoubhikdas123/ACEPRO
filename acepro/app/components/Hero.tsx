@@ -92,7 +92,8 @@ export default function Hero() {
             </div>
 
             {/* Social Proof */}
-            <div className="flex flex-nowrap items-center gap-2 md:gap-6 mt-8 mb-8">
+            <div className="flex  flex-nowrap items-center justify-between gap-2 md:gap-6 mt-8 mb-8">
+             <div className='flex flex-nowrap justify-center items-center'>
               <div className="flex -space-x-2 md:-space-x-3">
                 {socialpics.map((i) => (
                   <div key={i} className="w-[24px] h-[24px] md:w-[40px] md:h-[40px] rounded-full border-1 border-[#7E828A]">
@@ -101,8 +102,8 @@ export default function Hero() {
                 ))}
               </div>
               <div>
-                <p className="font-semibold text-gray-900 text-[12px] md:text-base whitespace-nowrap">5000+ Students</p>
-              </div>
+                <p className="font-semibold text-gray-900 text-[12px] pl-4 md:text-base whitespace-nowrap">5000+ Students</p>
+              </div> </div>
               <div className="flex items-center gap-0.5 md:gap-1">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star key={i} className="w-3 h-3 md:w-5 md:h-5 fill-red-500 text-red-500" />
@@ -113,20 +114,20 @@ export default function Hero() {
 
             {/* Certifications */}
             <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-8">
-              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col items-center justify-center text-center">
-                <div className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[34px] md:h-[34px] bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mb-2">
-                  <Image src={"/34.png"} width={40} height={40} alt="PMI Logo" className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]" />
+              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col lg:flex-row items-center justify-center text-center">
+                <div className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px] scale-75  bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 ">
+                  <Image src={"/34.png"} width={40} height={40} alt="PMI Logo" className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px]" />
                 </div>
                 <div>
-                  <p className="text-[10px] sm:text-[12px] md:text-[14px] text-[#1E293B] leading-tight">Authorized Training Partner of</p>
-                  <p className="text-[10px] sm:text-[12px] md:text-[14px] text-[#1E293B] leading-tight">Project Management Institute</p>
+                  <p className="text-[10px] sm:text-[18px] md:text-[14px] text-[#1E293B] leading-tight">Authorized Training Partner of</p>
+                  <p className="text-[10px] sm:text-[18px] md:text-[14px] text-[#1E293B] leading-tight">Project Management Institute</p>
                 </div>
               </div>
-              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col lg:flex-row items-center justify-center text-center">
                 <Image src={"/siliconinida.png"} width={70} height={16} alt="Training Logo" className="w-[70px] h-[16px] sm:w-[92px] sm:h-[20px] flex-shrink-0 mb-2" />
                 <div>
-                  <p className="text-[10px] sm:text-[12px] md:text-sm text-[#1E293B] leading-tight">Top 10 PMP Training</p>
-                  <p className="text-[10px] sm:text-[12px] md:text-sm text-[#1E293B] leading-tight">Institutes in India - 2024</p>
+                  <p className="text-[10px] sm:text-[18px] md:text-sm text-[#1E293B] leading-tight">Top 10 PMP Training</p>
+                  <p className="text-[10px] sm:text-[18px] md:text-sm text-[#1E293B] leading-tight">Institutes in India - 2024</p>
                 </div>
               </div>
             </div>

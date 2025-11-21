@@ -12,7 +12,7 @@ export function TeamLevelUpCTA() {
           {/* Background Layer - Clipped for Circle */}
           <div className="absolute inset-0 rounded-[2.5rem] sm:rounded-0 bg-gradient-to-r from-blue-100 via-blue-50 to-cyan-50 dark:from-blue-950/60 dark:via-blue-900/40 dark:to-cyan-900/40 overflow-hidden">
             {/* Semi-Circle Background */}
-            <div className="absolute bottom-0 right-20 md:right-[80px] w-[60px] h-[60px] sm:w-[160px] sm:h-[200px] md:w-[200px] md:h-[150px] bg-blue-200/50 dark:bg-blue-500/20 rounded-full  translate-y-1/4"></div>
+            <div className="absolute bottom-0 right-20 md:right-[80px] w-[60px] h-[60px] sm:w-[200px] sm:h-[200px] md:w-[200px] md:h-[150px] bg-blue-200/50 dark:bg-blue-500/20 rounded-full  translate-y-1/4"></div>
           </div>
 
           {/* Content Layer - Visible Overflow for Image */}
@@ -37,7 +37,7 @@ export function TeamLevelUpCTA() {
               <img
                 src="/girlthump.png"
                 alt="Team member leveling up"
-                className="relative z-10 w-full max-w-[120px] sm:max-w-[180px]  lg:scale-[200%] h-auto object-contain md:-mt-[-20px] md:-mr-4 right-20 lg:-mt-[-20px] transform lg:top-[-60px]"
+                className="relative lg:right-[120px] z-10 w-full max-w-[120px] sm:max-w-[180px]  lg:scale-[200%] h-auto object-contain md:-mt-[-20px] md:-mr-4 right-20 lg:-mt-[-20px] transform lg:top-[-60px]"
               />
             </div>
 
