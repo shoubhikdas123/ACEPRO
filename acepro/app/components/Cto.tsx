@@ -18,8 +18,7 @@ export function ExpertMentorCTA() {
           Positioned absolutely to break the container's bottom boundary.
           It's placed first in the DOM for stacking context, but z-index could also be used.
         */}
-        <div className="absolute  bg-yellow-400   top-0  md:top-[-110px] overflow-hidden left-4 sm:left-8 md:left-12 w-24 sm:w-32 md:w-52  sm:h-[100px] md:h-auto">
-          {/* Background Circle */}
+         <div className="absolute bottom-0 top-auto md:bottom-auto md:top-[-110px] overflow-hidden left-4 sm:left-8 md:left-12 w-24 sm:w-32 md:w-52 sm:h-[100px] md:h-auto">
           <div className="absolute  top-[60px] sm:top-[80px] md:top-[150px] left-1/2 -translate-x-1/2 w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-48 md:h-48 bg-amber-200 dark:bg-neutral-700 rounded-full"></div>
           <Image className="relative z-10 w-full h-auto object-contain object-bottom scale-x-[-1]" src={"/girl.png"} width={200} height={200} alt="Mentor Circle Background" />
           {/* Person Image
