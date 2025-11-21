@@ -13,14 +13,14 @@ import Image from "next/image";
 export function ExpertMentorCTA() {
   return (
     <section className="container  mx-auto my-32  py-12">
-      <div className="relative h-auto md:h-[180px] flex flex-row md:flex-row sm:flex-row justify-end bg-amber-100 dark:bg-neutral-800 rounded-2xl shadow-sm py-2 md:py-0">
+      <div className="relative h-auto md:h-[180px] sm:h-[134px]  flex flex-row md:flex-row sm:flex-row justify-end bg-amber-100 dark:bg-neutral-800 rounded-2xl shadow-sm py-2 md:py-0">
         {/* Image Container
           Positioned absolutely to break the container's bottom boundary.
           It's placed first in the DOM for stacking context, but z-index could also be used.
         */}
-        <div className="absolute   top-0 sm:top-[-20px] md:top-[-110px] overflow-hidden left-4 sm:left-8 md:left-12 w-24 sm:w-32 md:w-52  sm:h-[105px] md:h-auto">
+        <div className="absolute  bg-yellow-400   top-0  md:top-[-110px] overflow-hidden left-4 sm:left-8 md:left-12 w-24 sm:w-32 md:w-52  sm:h-[100px] md:h-auto">
           {/* Background Circle */}
-          <div className="absolute top-[60px] sm:top-[80px] md:top-[150px] left-1/2 -translate-x-1/2 w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-48 md:h-48 bg-amber-200 dark:bg-neutral-700 rounded-full"></div>
+          <div className="absolute  top-[60px] sm:top-[80px] md:top-[150px] left-1/2 -translate-x-1/2 w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-48 md:h-48 bg-amber-200 dark:bg-neutral-700 rounded-full"></div>
           <Image className="relative z-10 w-full h-auto object-contain object-bottom scale-x-[-1]" src={"/girl.png"} width={200} height={200} alt="Mentor Circle Background" />
           {/* Person Image
             - Needs to be a PNG with a transparent background.
