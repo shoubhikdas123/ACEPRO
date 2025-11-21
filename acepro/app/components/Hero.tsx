@@ -18,14 +18,14 @@ export default function Hero() {
   return (
     <div className="min-h-screen min-w-full bg-white">
       {/* Top Banner */}
-      <div className="bg-blue-600 w-full text-white min-h-[50px] h-auto py-[7px] px-4">
-        <div className="flex flex-wrap items-center justify-center gap-4 text-sm md:text-base">
+      <div className="bg-blue-600 w-full text-white min-h-[50px] h-auto py-[7px] px-2 md:px-4">
+        <div className="flex flex-nowrap items-center justify-center gap-1 md:gap-4 text-xs md:text-base">
           <Image className='hidden md:block transform -scale-x-100 -rotate-40' src={"/horn.png"} width={37.65} height={37.65} alt="" />
-          <span className="font-bold text-[16px] px-[8px]">Kickstart Your Learning Journey — Now Up to 50% Off</span>
-          <Button variant="secondary" size="sm" className="bg-white rounded-[3px] text-blue-600 hover:bg-gray-100 px-[20px] py-[8px] font-semibold">
+          <span className="font-bold text-[11px] md:text-[16px] px-[4px] md:px-[8px] whitespace-nowrap">Kickstart Your Learning Journey — Now Up to 50% Off</span>
+          <Button variant="secondary" size="sm" className="bg-white rounded-[3px] text-blue-600 hover:bg-gray-100 px-[8px] md:px-[20px] py-[4px] md:py-[8px] font-semibold text-[10px] md:text-sm whitespace-nowrap">
             Grab Now
           </Button>
-          <span className="font-bold px-[8px]">Ends Soon!</span>
+          <span className="font-bold px-[4px] md:px-[8px] text-[11px] md:text-base whitespace-nowrap">Ends Soon!</span>
           <Image className='hidden md:block transform  rotate-40' src={"/horn.png"} width={37.5} height={37.5} alt="" />
         </div>
       </div>
@@ -92,41 +92,41 @@ export default function Hero() {
             </div>
 
             {/* Social Proof */}
-            <div className="flex flex-wrap items-center gap-6 mt-8 mb-8">
-              <div className="flex -space-x-3">
+            <div className="flex flex-nowrap items-center gap-2 md:gap-6 mt-8 mb-8">
+              <div className="flex -space-x-2 md:-space-x-3">
                 {socialpics.map((i) => (
-                  <div key={i} className="w-[40px] h-[40px] rounded-full  border-1 border-[#7E828A]">
-                    <Image src={i} width={40} height={40} alt="Student" className="w-full h-full rounded-full object-cover" />
+                  <div key={i} className="w-[24px] h-[24px] md:w-[40px] md:h-[40px] rounded-full border-1 border-[#7E828A]">
+                    <Image src={i} width={24} height={24} alt="Student" className="w-full h-full rounded-full object-cover" />
                   </div>
                 ))}
               </div>
               <div>
-                <p className="font-semibold text-gray-900">5000+ Students</p>
+                <p className="font-semibold text-gray-900 text-[12px] md:text-base whitespace-nowrap">5000+ Students</p>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-0.5 md:gap-1">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="w-5 h-5 fill-red-500 text-red-500" />
+                  <Star key={i} className="w-3 h-3 md:w-5 md:h-5 fill-red-500 text-red-500" />
                 ))}
-                <span className="ml-2 text-gray-700">(4.5 Rating)</span>
+                <span className="ml-1 md:ml-2 text-gray-700 text-[12px] md:text-base whitespace-nowrap">(4.5 Rating)</span>
               </div>
             </div>
 
             {/* Certifications */}
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] sm:w-[176px] sm:h-[102px] rounded-[10px] p-4 flex items-center gap-3">
-                <div className="w-[50px] h-[50px] sm:w-[34] sm:h-[34] bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Image src={"/34.png"} width={50} height={50} alt="PMI Logo" className="" />
+            <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-8">
+              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+                <div className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[34px] md:h-[34px] bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mb-2">
+                  <Image src={"/34.png"} width={40} height={40} alt="PMI Logo" className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px]" />
                 </div>
                 <div>
-                  <p className="text-[14px]  text-[#1E293B]">Authorized Training Partner of</p>
-                  <p className="text-[14px] text-[#1E293B]">Project Management Institute</p>
+                  <p className="text-[10px] sm:text-[12px] md:text-[14px] text-[#1E293B] leading-tight">Authorized Training Partner of</p>
+                  <p className="text-[10px] sm:text-[12px] md:text-[14px] text-[#1E293B] leading-tight">Project Management Institute</p>
                 </div>
               </div>
-              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full rounded-[10px] p-4 flex items-center gap-3">
-                <Image src={"/siliconinida.png"} width={92} height={20} alt="Training Logo" className="w-[92px] h-[20px] " />
+              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col items-center justify-center text-center">
+                <Image src={"/siliconinida.png"} width={70} height={16} alt="Training Logo" className="w-[70px] h-[16px] sm:w-[92px] sm:h-[20px] flex-shrink-0 mb-2" />
                 <div>
-                  <p className="text-sm text-[#1E293B]">Top 10 PMP Training</p>
-                  <p className="text-sm text-[#1E293B]">Institutes in India - 2024</p>
+                  <p className="text-[10px] sm:text-[12px] md:text-sm text-[#1E293B] leading-tight">Top 10 PMP Training</p>
+                  <p className="text-[10px] sm:text-[12px] md:text-sm text-[#1E293B] leading-tight">Institutes in India - 2024</p>
                 </div>
               </div>
             </div>

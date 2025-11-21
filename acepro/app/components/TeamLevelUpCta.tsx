@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function TeamLevelUpCTA() {
   return (
-    <section className="bg-white  dark:bg-slate-900 md:py-24  overflow-hidden">
+    <section className="bg-white  dark:bg-slate-900 md:py-48  overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
 
         {/* Card Container */}
