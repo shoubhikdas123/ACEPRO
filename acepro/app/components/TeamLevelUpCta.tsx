@@ -37,7 +37,7 @@ export function TeamLevelUpCTA() {
               <img
                 src="/girlthump.png"
                 alt="Team member leveling up"
-                className="relative lg:right-[120px] z-10 w-full w-[250px] scale-[110%]  lg:scale-[200%]  h-auto object-contain md:-mt-[-20px] md:-mr-4 lg:-mt-[-20px] transform lg:top-[-60px]"
+                className="relative lg:right-[80px] z-10 w-full w-[250px] scale-[110%]  lg:scale-[200%]  h-auto object-contain md:-mt-[-20px] md:-mr-4 lg:-mt-[-20px] transform lg:top-[-84px]"
               />
             </div>
 

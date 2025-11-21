@@ -113,8 +113,8 @@ export default function Hero() {
             </div>
 
             {/* Certifications */}
-            <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-8">
-              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col lg:flex-row items-center justify-center text-center">
+            <div className="grid grid-cols-2 sm:gap-4 mb-8">
+              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[300px] rounded-[10px] p-3 sm:p-4 flex flex-col lg:flex-row items-center justify-center text-center">
                 <div className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px] scale-75  bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 ">
                   <Image src={"/34.png"} width={40} height={40} alt="PMI Logo" className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px]" />
                 </div>

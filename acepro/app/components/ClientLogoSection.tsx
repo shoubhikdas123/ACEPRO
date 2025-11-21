@@ -20,7 +20,7 @@ const clientLogos = [
 export function ClientLogosSection() {
   return (
     // We use a <section> wrapper and two inner divs for the distinct backgrounds.
-    <section className="py-16">
+    <section className="py-16 w-full">
       
       {/* Top Part: Title with dark background */}
       <div className=" dark:bg-gray-950 py-12">
@@ -32,12 +32,13 @@ export function ClientLogosSection() {
       </div>
 
       {/* Bottom Part: Logos with light background */}
+      <div className='w-full h-[50px]  relative overflow-hidden'>
       <img
         src="/client.png"
         alt="Client Logos Background"
-        className="w-full h-[106px] object-cover"
+        className="object-cover w-full relative top-[-40px] h-[100px]"
       />
-      
+      </div>
     </section>
   );
 }
