@@ -4,15 +4,15 @@ import { Button } from "@/components/ui/button";
 export function TeamLevelUpCTA() {
   return (
     <section className="bg-white dark:bg-slate-900 md:py-48 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto lg:px-4 md:px-6">
 
         {/* Card Wrapper */}
         <div className="relative w-full">
 
           {/* Background Layer - Clipped for Circle */}
-          <div className="absolute inset-0 rounded-[2.5rem] sm:rounded-0 bg-gradient-to-r from-blue-100 via-blue-50 to-cyan-50 dark:from-blue-950/60 dark:via-blue-900/40 dark:to-cyan-900/40 overflow-hidden">
+          <div className="absolute sm:w-full  inset-0 lg:rounded-[2.5rem] sm:rounded-0 bg-gradient-to-r from-blue-100 via-blue-50 to-cyan-50 dark:from-blue-950/60 dark:via-blue-900/40 dark:to-cyan-900/40 overflow-hidden">
             {/* Semi-Circle Background */}
-            <div className="absolute bottom-0 right-20 md:right-[80px] w-[60px] h-[60px] sm:w-[200px] sm:h-[200px] md:w-[200px] md:h-[150px] bg-blue-200/50 dark:bg-blue-500/20 rounded-full  translate-y-1/4"></div>
+            <div className="absolute bottom-0 right-[20px] md:right-[80px] w-[150px] h-[150px] md:w-[200px] md:h-[150px] bg-blue-200/50 dark:bg-blue-500/20 rounded-full  translate-y-1/4"></div>
           </div>
 
           {/* Content Layer - Visible Overflow for Image */}
@@ -32,12 +32,12 @@ export function TeamLevelUpCTA() {
             </div>
 
             {/* Right Image Area */}
-            <div className="relative w-1/3 md:w-1/5 flex justify-center md:justify-end self-end">
+            <div className="relative w-2/3 md:w-1/5 flex justify-center md:justify-end self-end">
               {/* Image */}
               <img
                 src="/girlthump.png"
                 alt="Team member leveling up"
-                className="relative lg:right-[120px] z-10 w-full max-w-[120px] sm:max-w-[180px]  lg:scale-[200%] h-auto object-contain md:-mt-[-20px] md:-mr-4 right-20 lg:-mt-[-20px] transform lg:top-[-60px]"
+                className="relative lg:right-[120px] z-10 w-full w-[250px] scale-[110%]  lg:scale-[200%]  h-auto object-contain md:-mt-[-20px] md:-mr-4 lg:-mt-[-20px] transform lg:top-[-60px]"
               />
             </div>
 

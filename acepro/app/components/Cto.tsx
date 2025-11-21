@@ -45,7 +45,7 @@ export function ExpertMentorCTA() {
           - `pr-6` (and variants) gives padding on the right.
         */}
         <div className="relative w-full md:w-2/3 z-20 flex flex-col md:flex-row items-center md:items-center justify-center md:justify-around gap-4 md:gap-0 pl-28 sm:pl-48 sm:ml-48 md:pl-0 pr-4 md:pr-0">
-          <div className="text-lg ml-4 sm:text-xl md:text-2xl font-bold text-neutral-900 dark:text-white lg:text-center md:text-left">
+          <div className="text-lg ml-2 sm:text-xl md:text-2xl font-bold text-neutral-900 dark:text-white lg:text-center md:text-left">
             Book 1:1 call with our Expert Mentor
           </div>
           <div className="w-full ml-4">
