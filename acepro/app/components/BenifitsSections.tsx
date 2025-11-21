@@ -111,6 +111,72 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
   );
 }
 
+interface SalaryData {
+  designation: string;
+  salary: string;
+  source?: string;
+}
+
+const mobileDataINR: SalaryData[] = [
+  { designation: 'Project Coordinator', salary: '₹ 8L' },
+  { designation: 'Junior Project Manager', salary: '₹ 12L' },
+  { designation: 'Project Manager', salary: '₹ 17L' },
+  { designation: 'Senior PM/Program Manager', salary: '₹ 24L+' },
+];
+
+const mobileDataUSD: SalaryData[] = [
+  { designation: 'Project Coordinator', salary: '$68,900', source: '(Source - Indeed)' },
+  { designation: 'Junior Project Manager', salary: '$105,600', source: '(Source - The Digital Project Manager - Full Time PMs)' },
+  { designation: 'Senior PM/Program Manager', salary: '$140,000', source: '(Source - Glassdoor Data)' },
+];
+
+function MobileSalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
+  const data = currency === 'INR' ? mobileDataINR : mobileDataUSD;
+  const title = currency === 'INR' ? 'Avg Annual Salary (INR)' : 'Avg Annual Salary (USD)';
+
+  return (
+    <Card className="overflow-hidden mb-4 border-none shadow-none">
+      <CardContent className="p-0">
+        {/* Header */}
+        <div className="grid grid-cols-2 bg-white dark:bg-slate-800 text-center">
+          <div className="font-semibold text-sm text-gray-900 dark:text-white p-4 border-b border-r border-gray-200 dark:border-slate-700 flex items-center justify-center">
+            Designation
+          </div>
+          <div className="font-semibold text-sm text-gray-900 dark:text-white p-4 border-b border-gray-200 dark:border-slate-700 flex items-center justify-center">
+            {title}
+          </div>
+        </div>
+
+        {/* Body */}
+        <div className="dark:divide-slate-700">
+          {data.map((item, idx) => (
+            <div key={idx} className="grid grid-cols-2">
+              {/* Left Column: Designation */}
+              <div className="p-4 flex items-center justify-center bg-blue-50 dark:bg-blue-900/20 border-b border-r border-gray-200 dark:border-slate-700">
+                <span className="text-sm font-medium text-[#016FC0] dark:text-blue-400 text-center">
+                  {item.designation}
+                </span>
+              </div>
+
+              {/* Right Column: Salary */}
+              <div className="p-4 flex flex-col items-center justify-center bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-700">
+                <span className="text-sm font-bold text-gray-900 dark:text-white">
+                  {item.salary}
+                </span>
+                {item.source && (
+                  <span className="text-[10px] text-gray-500 mt-1 text-center leading-tight">
+                    {item.source}
+                  </span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
 /**
  * BenefitsSection
  * The main component that includes the intro text and the two salary tables.
@@ -141,8 +207,17 @@ export function BenefitsSection() {
 
         {/* Salary Tables Container */}
         <div className="space-y-8">
-          <SalaryTable currency="INR" />
-          <SalaryTable currency="USD" />
+          {/* Desktop View */}
+          <div className="hidden lg:block space-y-8">
+            <SalaryTable currency="INR" />
+            <SalaryTable currency="USD" />
+          </div>
+
+          {/* Mobile View */}
+          <div className="lg:hidden space-y-8">
+            <MobileSalaryTable currency="INR" />
+            <MobileSalaryTable currency="USD" />
+          </div>
         </div>
 
       </div>

@@ -34,7 +34,7 @@ export default function Home() {
             <OverviewSection />
             <TakeawaysSection />
             {/* Mobile sidebar */}
-            <div className="block md:hidden mb-6">
+            <div className="flex justify-center md:hidden mb-6">
               <CourseSidebar />
             </div>
             <BenefitsSection />
