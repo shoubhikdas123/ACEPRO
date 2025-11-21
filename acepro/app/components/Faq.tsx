@@ -40,9 +40,9 @@ const faqData = [
 export function FaqSection() {
   return (
     // Section wrapper with padding and a light background
-    <section className="py-16 bg-slate-50 dark:bg-slate-950">
+    <section id="faqs" className="py-16 bg-slate-50 dark:bg-slate-950">
       <div className="container mx-auto px-4 max-w-4xl">
-        
+
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
           Frequently Asked Questions
@@ -79,7 +79,7 @@ export function FaqSection() {
             </AccordionItem>
           ))}
         </Accordion>
-        
+
       </div>
     </section>
   );

@@ -58,11 +58,11 @@ const curriculumData = [
 export function CurriculumSection() {
   return (
     // Section wrapper with padding and a light background
-    <section className="py-16 ">
+    <section id="curriculum" className="py-16 ">
       <div className="container mx-auto px-4 max-w-4xl">
-        
+
         {/* Section Heading */}
-        
+
 
         {/* Accordion Container
           - `bg-background` gives it the white card look
@@ -70,8 +70,8 @@ export function CurriculumSection() {
         */}
         <div className="dark:bg-slate-900 bg-[#F6F6F6] rounded-2xl  p-6 md:p-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-          PMP Certification Course Curriculum
-        </h2>
+            PMP Certification Course Curriculum
+          </h2>
           <Accordion
             type="single"
             collapsible

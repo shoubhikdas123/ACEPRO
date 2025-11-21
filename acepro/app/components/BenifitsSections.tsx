@@ -118,7 +118,7 @@ function SalaryTable({ currency }: { currency: 'INR' | 'USD' }) {
 export function BenefitsSection() {
   return (
     // Section wrapper with the light cream background
-    <section className=" mt-[48px] pb-[12px] rounded-[20px] bg-[#FEF7EA] dark:bg-slate-950">
+    <section id="benefits" className=" mt-[48px] pb-[12px] rounded-[20px] bg-[#FEF7EA] dark:bg-slate-950">
       <div className="container mx-auto px-4">
 
         {/* Introduction Text */}

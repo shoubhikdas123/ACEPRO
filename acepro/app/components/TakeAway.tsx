@@ -25,7 +25,7 @@ const takeaways = [
 export function TakeawaysSection() {
   return (
     // Section wrapper with padding and a light background
-    <section className=" bg-[#F6F6F6] pb-[24px]  rounded-[20px] ">
+    <section id="takeaway" className=" bg-[#F6F6F6] pb-[24px]  rounded-[20px] ">
       <div className="container   ">
 
         {/* Section Heading */}

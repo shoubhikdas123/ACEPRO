@@ -167,7 +167,7 @@ function ScheduleCard({ item }: { item: (typeof scheduleData)[0] }) {
  */
 export function ScheduleSection() {
   return (
-    <section className="py-16 bg-white dark:bg-slate-950">
+    <section id="schedules" className="py-16 bg-white dark:bg-slate-950">
       <div className="container mx-auto px-4 bg-amber-50 dark:bg-slate-900 p-6 md:p-10 rounded-2xl">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
           Schedule

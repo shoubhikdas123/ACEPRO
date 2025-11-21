@@ -131,7 +131,7 @@ export function AddonServices() {
 
               {/* Card Footer (only shown if buttonText exists) */}
               {service.buttonText && (
-                <CardFooter className="p-6  mb-4 pt-0">
+                <CardFooter className="p-6  mb-2 pt-0">
                   <Button className="w-full  bg-[#016FC0]">{service.buttonText}</Button>
                 </CardFooter>
               )}
