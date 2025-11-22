@@ -32,11 +32,11 @@ export function ClientLogosSection() {
       </div>
 
       {/* Bottom Part: Logos with light background */}
-      <div className='w-full h-[50px]  relative overflow-hidden'>
+      <div className='w-full h-[80px]  relative overflow-hidden'>
       <img
         src="/client.png"
         alt="Client Logos Background"
-        className="object-cover w-full relative top-[-40px] h-[100px]"
+        className="object-cover w-full scale-[150%] relative top-[-40px] h-[100px]"
       />
       </div>
     </section>

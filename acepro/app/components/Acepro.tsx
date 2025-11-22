@@ -108,7 +108,7 @@ export function AceproEdgeSection() {
       <div className="container mx-auto px-4">
         
         {/* Section Heading */}
-        <h2 className="text-3xl pt-[24px] md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+        <h2 className="text-[24px] pt-[24px] md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
           Acepro Edge
         </h2>
 

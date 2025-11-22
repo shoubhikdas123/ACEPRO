@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-3 lg:ml-[60px] ml-[12px] mr-[12px] lg:mr-0">
           {/* Left Column */}
           <div>
-            <div className="mb-2 text-[15px] text-[#016FC0] ">
+            <div className="mb-2 text-[15px] font-semibold text-[#016FC0] ">
               PROJECT MANAGEMENT CERTIFICATION COURSE
             </div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
             </div>
 
             {/* Social Proof */}
-            <div className="flex  flex-nowrap items-center justify-between gap-2 md:gap-6 mt-8 mb-8">
+            <div className="flex  flex-nowrap items-center  gap-2 md:gap-4 mt-8 mb-8">
              <div className='flex flex-nowrap justify-center items-center'>
               <div className="flex -space-x-2 md:-space-x-3">
                 {socialpics.map((i) => (
@@ -106,7 +106,7 @@ export default function Hero() {
               </div> </div>
               <div className="flex items-center gap-0.5 md:gap-1">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="w-3 h-3 md:w-5 md:h-5 fill-red-500 text-red-500" />
+                  <Star key={i} className="w-[16px] h-[16px]  fill-red-500 text-red-500" />
                 ))}
                 <span className="ml-1 md:ml-2 text-gray-700 text-[12px] md:text-base whitespace-nowrap">(4.5 Rating)</span>
               </div>
@@ -119,13 +119,13 @@ export default function Hero() {
                   <Image src={"/34.png"} width={40} height={40} alt="PMI Logo" className="w-[40px] h-[40px] sm:w-[70px] sm:h-[70px]" />
                 </div>
                 <div>
-                  <p className="text-[10px] sm:text-[18px] md:text-[14px] text-[#1E293B] leading-tight">Authorized Training Partner of</p>
-                  <p className="text-[10px] sm:text-[18px] md:text-[14px] text-[#1E293B] leading-tight">Project Management Institute</p>
+                  <p className="text-[14px] sm:text-[18px] md:text-[14px] text-[#1E293B] leading-tight">Authorized Training Partner of</p>
+                  <p className="text-[14px] sm:text-[18px] md:text-[14px] text-[#1E293B] leading-tight">Project Management Institute</p>
                 </div>
               </div>
-              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col lg:flex-row items-center justify-center text-center">
+              <div className="bg-[#FCEBCBCC] bg-opacity-80 w-full md:h-[74px] md:w-[282px] rounded-[10px] p-3 sm:p-4 flex flex-col lg:flex-row items-center justify-center ">
                 <Image src={"/siliconinida.png"} width={70} height={16} alt="Training Logo" className="w-[70px] h-[16px] sm:w-[92px] sm:h-[20px] flex-shrink-0 mb-2" />
-                <div>
+                <div className="">
                   <p className="text-[10px] sm:text-[18px] md:text-sm text-[#1E293B] leading-tight">Top 10 PMP Training</p>
                   <p className="text-[10px] sm:text-[18px] md:text-sm text-[#1E293B] leading-tight">Institutes in India - 2024</p>
                 </div>
@@ -134,7 +134,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col md:flex-row gap-4">
-              <Button size="lg" className="bg-blue-600 rounded-[4px] hover:bg-blue-700 text-white px-8 w-full md:w-auto">
+              <Button size="lg" className="bg-blue-600 rounded-[4px] hover:bg-blue-700 text-white  w-full lg:w-[220px] md:w-auto">
 
                 View Schedules
               </Button>

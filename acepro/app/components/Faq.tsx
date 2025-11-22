@@ -40,8 +40,8 @@ const faqData = [
 export function FaqSection() {
   return (
     // Section wrapper with padding and a light background
-    <section id="faqs" className="py-16 bg-slate-50 dark:bg-slate-950">
-      <div className="container mx-auto px-4 max-w-4xl">
+    <section id="faqs" className="py-16 mx-8 bg-slate-50 dark:bg-slate-950">
+      <div className="container mx-auto px-4 max-w-[1240px]">
 
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
@@ -53,15 +53,15 @@ export function FaqSection() {
           type="single"
           collapsible
           defaultValue="item-1" // First item is open by default
-          className="w-full"
+          className="w-full "
         >
           {faqData.map((item) => (
             <AccordionItem
               key={item.id}
               value={item.id}
-              className="bg-background dark:bg-slate-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm mb-4"
+              className="bg-background dark:bg-slate-900 border border-gray-200 data-[state=open]:border-[#FFABAB] hover:border-[#FFABAB] dark:border-gray-700 rounded-lg shadow-sm mb-4"
               // Add special styling for the open item
-              data-state="open"
+             
             >
               <AccordionTrigger className="p-5 font-semibold text-base md:text-lg hover:no-underline">
                 {item.question}

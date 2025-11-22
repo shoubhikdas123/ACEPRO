@@ -8,19 +8,19 @@ import React from 'react';
 export function CertificateSection() {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container w-full mx-auto px-4">
 
         {/* Main Container
           - Styled with a light blue gradient and rounded corners
         */}
-        <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-950/30 p-8 md:p-12 shadow-lg">
+        <div className="rounded-2xl w-full bg-gradient-to-r from-blue-50 to-[#C5E6FF] dark:from-blue-950/30 dark:to-cyan-950/30 p-8 md:p-12 shadow-lg">
 
           {/* Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="flex flex-col md:flex-row w-full  md:grid-cols-2 gap-6 items-center">
 
             {/* Left Column: Text Content */}
-            <div className="md:pr-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
+            <div className="md:pr-8 w-2/3 ">
+              <h2 className="text-[27px] md:text-[44px]  font-bold text-gray-900 dark:text-white leading-tight">
                 <span className="text-blue-600 dark:text-blue-400">Elevate Your Career</span> with Acepro's Project Management Certification
               </h2>
               <p className="mt-6 text-gray-700 dark:text-gray-300 leading-relaxed">

@@ -46,8 +46,8 @@ function InstructorCard({ instructor }: { instructor: (typeof instructorData)[0]
   const readMoreText = isExpanded ? "Read Less" : "Read More";
 
   return (
-    <Card id="instructor" className="shadow-lg rounded-2xl bg-[#F8F8F8] border border-gray-200 w-full sm:w-[320px] md:w-[380px] lg:w-[437px]">
-      <CardContent className="p-6">
+    <Card id="instructor" className="shadow-lg rounded-2xl bg-[#F8F8F8] border border-gray-200 w-[320px] md:w-[437px]  ">
+      <CardContent className="">
         {/* Top section: Avatar, Name, Role, Students */}
         <div className="flex gap-4 mb-4">
           <Avatar className="h-20 w-20 flex-shrink-0 rounded-lg">
@@ -58,7 +58,8 @@ function InstructorCard({ instructor }: { instructor: (typeof instructorData)[0]
           </Avatar>
           <div className="flex-1">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">{instructor.name}</h3>
-            <p className="text-sm text-[#7E828A] dark:text-gray-400 mb-3">{instructor.role}</p>
+            <p className="text-sm border-b-2 pb-2 text-[#7E828A] dark:text-gray-400 mb-3">{instructor.role}</p>
+            
             <Badge  className="bg-blue-50 text-blue-600  text-xs">
               <span className="text-blue-600 font-semibold">{instructor.students}</span>
             </Badge>
@@ -94,7 +95,7 @@ export function InstructorsSection() {
       <div className="container mx-auto px-4">
         
         {/* Section Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E293B] mb-8">
+        <h2 className="text-3xl md:text[28px] font-bold text-[#1E293B] mb-4">
           Our Course Instructors
         </h2>
 

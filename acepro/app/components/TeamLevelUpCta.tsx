@@ -12,7 +12,7 @@ export function TeamLevelUpCTA() {
           {/* Background Layer - Clipped for Circle */}
           <div className="absolute sm:w-full  inset-0 lg:rounded-[2.5rem] sm:rounded-0 bg-gradient-to-r from-blue-100 via-blue-50 to-cyan-50 dark:from-blue-950/60 dark:via-blue-900/40 dark:to-cyan-900/40 overflow-hidden">
             {/* Semi-Circle Background */}
-            <div className="absolute bottom-0 right-[20px] md:right-[80px] w-[150px] h-[150px] md:w-[200px] md:h-[150px] bg-blue-200/50 dark:bg-blue-500/20 rounded-full  translate-y-1/4"></div>
+            <div className="absolute bottom-0 right-[20px] md:right-[80px] w-[150px] h-[150px] md:w-[200px] md:h-[200px] bg-blue-200/50 dark:bg-blue-500/20 rounded-full  translate-y-1/4"></div>
           </div>
 
           {/* Content Layer - Visible Overflow for Image */}

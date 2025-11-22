@@ -85,7 +85,7 @@ const SliderSection = () => {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:ml-[20px] py-6 sm:py-8 md:py-12">
       {/* Header with Navigation (Desktop) */}
       <div className="flex flex-col sm:flex-row items-center justify-center mb-6 sm:mb-8 md:mb-12 gap-4 sm:gap-0">
-        <div className="text-[24px] flex-col justify-center items-center w-full  sm:text-[28px] md:text-[36px] font-bold text-[#1E293B] text-center sm:text-center flex-1">
+        <div className="text-[24px] flex-col justify-center items-center w-full   md:text-[36px] font-bold text-[#1E293B] text-center sm:text-center flex-1">
           Your Path to PMP<span className="text-[16px] sm:text-[20px] md:text-[24px] relative top-[-8px] sm:top-[-10px]">®</span> Success - Structured,
           <br className="hidden sm:block" />
           <span className="sm:inline"> Smart, Supported</span>
@@ -116,13 +116,13 @@ const SliderSection = () => {
       <div className="relative overflow-hidden">
         <div
           ref={sliderRef}
-          className="flex gap-3 sm:gap-4 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+          className="flex gap-3 sm:gap-4 md:gap-6  overflow-x-auto scroll-smooth snap-x snap-mandatory"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {slides.map((slide, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[250px] border-[0.75px] h-auto sm:min-h-[260px] md:h-[284px] rounded-[16px] sm:rounded-[20px] snap-start flex flex-col"
+              className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[250px] border-[0.75px] h-[264px] sm:min-h-[260px] md:h-[264px] rounded-[16px] sm:rounded-[20px] snap-start flex flex-col"
             >
               <div className="relative w-full h-auto sm:h-[150px] md:h-[160px]">
                 <Image

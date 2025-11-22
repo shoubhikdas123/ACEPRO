@@ -69,7 +69,7 @@ export function CurriculumSection() {
           - `rounded-2xl` and `shadow-xl` match the outer container style
         */}
         <div className="dark:bg-slate-900 bg-[#F6F6F6] rounded-2xl  p-6 md:p-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+          <h2 className="text-3xl md:text-[24px] font-bold text-gray-900 dark:text-white mb-8">
             PMP Certification Course Curriculum
           </h2>
           <Accordion
@@ -105,7 +105,7 @@ export function CurriculumSection() {
 
           {/* Download Button */}
           <div className="text-center mt-8">
-            <Button className="w-[218px] rounded-[4px] bg-[#016FC0]">
+            <Button className="w-[218px] h-[42px] rounded-[4px] bg-[#016FC0]">
               Download Curriculum
             </Button>
           </div>

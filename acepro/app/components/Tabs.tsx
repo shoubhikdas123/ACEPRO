@@ -86,7 +86,7 @@ export default function StickyCourseNav() {
           : 'w-full border-b lg:ml-4 bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-background/60'
       }
     >
-      <div className="container flex h-12 md:h-16 items-center justify-between px-4">
+      <div className="container flex h-12 md:h-16 items-center justify-around px-4">
         {/* Mobile Navigation Links - Scrollable */}
         <nav className="flex md:hidden flex-1 min-w-0 h-12 items-center overflow-x-auto scrollbar-hide gap-4 px-2">
           {navItems.map((item) => (
@@ -110,14 +110,14 @@ export default function StickyCourseNav() {
         </nav>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden w-[70%] md:flex h-16 items-center justify-between">
+        <nav className="hidden  md:flex h-16 items-center justify-between">
           {navItems.map((item) => (
             <a
               key={item.id}
               href={`#${item.id}`}
               onClick={(e) => handleNavClick(e, item.id)}
               className={cn(
-                'pb-1 text-sm font-medium transition-colors hover:text-primary relative',
+                'pb-1 text-sm font-medium  px-12 transition-colors hover:text-primary relative',
                 activeTab === item.id
                   ? 'text-primary'
                   : 'text-muted-foreground'
@@ -125,15 +125,15 @@ export default function StickyCourseNav() {
             >
               {item.name}
               {activeTab === item.id && (
-                <span className="absolute bottom-0 left-0 right-0 h-1 bg-primary shadow-sm" style={{ bottom: '-20px' }}></span>
+                <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-primary w-[149px] shadow-sm" style={{ bottom: '-20px' }}></span>
               )}
             </a>
           ))}
         </nav>
 
         {/* Action Button */}
-        <div className='mr-0 md:mr-32 flex-shrink-0'>
-          <Button className='bg-[#016FC0] w-[120px] md:w-[169px] text-xs md:text-base px-3 md:px-6'>View Schedule</Button>
+        <div className='mr-0 mr-12  md:mr-32 flex-shrink-0'>
+          <Button className='bg-[#016FC0] rounded-[4px] w-[120px] md:w-[169px] text-xs md:text-base px-3 md:px-6'>View Schedule</Button>
         </div>
       </div>
 

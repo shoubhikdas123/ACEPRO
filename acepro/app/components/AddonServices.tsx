@@ -79,7 +79,7 @@ export function AddonServices() {
   return (
     <section className="py-16">
       <div className="container lg:mx-[36px] px-4">
-        <h2 className="text-[36px] text-[#1E293B] font-bold mb-12 text-center">
+        <h2 className="text-[36px] text-[#1E293B] font-bold mb-8 text-center md:text-left">
           Add-on Services
         </h2>
         <div className="flex flex-col  md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:justify-items-center">
@@ -132,7 +132,7 @@ export function AddonServices() {
               {/* Card Footer (only shown if buttonText exists) */}
               {service.buttonText && (
                 <CardFooter className="p-6  mb-2 pt-0">
-                  <Button className="w-full  bg-[#016FC0]">{service.buttonText}</Button>
+                  <Button className="w-full rounded-[4px]  bg-[#016FC0]">{service.buttonText}</Button>
                 </CardFooter>
               )}
             </Card>
